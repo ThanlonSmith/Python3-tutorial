@@ -1,0 +1,1797 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>2. Python数据类型 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../03-python-function-detail/" />
+    
+    
+    <link rel="prev" href="../01-python-foundation/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Python教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../01-python-foundation/">
+            
+                <a href="../01-python-foundation/">
+            
+                    
+                    1. Python基础入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    2. Python数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../03-python-function-detail/">
+            
+                <a href="../03-python-function-detail/">
+            
+                    
+                    3. Python函数详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../04-python-decorator/">
+            
+                <a href="../04-python-decorator/">
+            
+                    
+                    4. Python装饰器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../05-python-derivation/">
+            
+                <a href="../05-python-derivation/">
+            
+                    
+                    5. Python推倒式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../06-python-built-in-lib/">
+            
+                <a href="../06-python-built-in-lib/">
+            
+                    
+                    6. Python内置库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../07-python-third-party-lib/">
+            
+                <a href="../07-python-third-party-lib/">
+            
+                    
+                    7. Python第三方库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../08-python-iterator/">
+            
+                <a href="../08-python-iterator/">
+            
+                    
+                    8. Python迭代器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../09-python-generator/">
+            
+                <a href="../09-python-generator/">
+            
+                    
+                    9. Python生成器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >2. Python数据类型</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <blockquote>
+<p>@[toc]</p>
+<h5 id="1-&#x6570;&#x5B57;&#x7C7B;&#x578B;&#x6574;&#x578B;">1. &#x6570;&#x5B57;&#x7C7B;&#x578B;(&#x6574;&#x578B;)</h5>
+<h6 id="11-&#x6574;&#x6570;">1.1 &#x6574;&#x6570;</h6>
+<p>&#x53EF;&#x4EE5;&#x7528;&#x5341;&#x8FDB;&#x5236;&#x3001;&#x4E8C;&#x8FDB;&#x5236;&#x3001;&#x516B;&#x8FDB;&#x5236;&#x3001;&#x5341;&#x516D;&#x8FDB;&#x5236;&#x8868;&#x793A;</p>
+<h6 id="12-&#x6D6E;&#x70B9;&#x6570;">1.2 &#x6D6E;&#x70B9;&#x6570;</h6>
+<p>&#x6D6E;&#x70B9;&#x6570;&#x5FC5;&#x987B;&#x5E26;&#x6709;&#x5C0F;&#x6570;&#x90E8;&#x5206;&#xFF0C;&#x5C0F;&#x6570;&#x90E8;&#x5206;&#x53EF;&#x4EE5;&#x662F;0&#x3002;&#x6D6E;&#x70B9;&#x6570;&#x6709;&#x4E24;&#x79CD;&#x8868;&#x793A;&#x65B9;&#x5F0F;&#xFF0C;&#x4E00;&#x822C;&#x5F62;&#x5F0F;&#xFF1A;123.456&#xFF1B;&#x79D1;&#x5B66;&#x8BA1;&#x6570;&#x6CD5;&#xFF1A;1.23456e2&#x6216;1.23456e+2&#xFF0C;&#x76F8;&#x5F53;&#x4E8E;1.23456x10<sup>2</sup>&#x3002;</p>
+<h5 id="2-&#x5E03;&#x5C14;&#x7C7B;&#x578B;">2. &#x5E03;&#x5C14;&#x7C7B;&#x578B;</h5>
+<p><kbd>bool</kbd>&#x5173;&#x952E;&#x5B57;&#x8868;&#x793A;&#x5E03;&#x5C14;&#x7C7B;&#x578B;&#xFF0C;&#x53EA;&#x6709;&#x4E24;&#x4E2A;&#x503C;&#xFF1A;True/False&#x3002;</p>
+<h5 id="3-&#x5B57;&#x7B26;&#x4E32;">3. &#x5B57;&#x7B26;&#x4E32;</h5>
+<h6 id="31-&#x516C;&#x5171;&#x529F;&#x80FD;">3.1 &#x516C;&#x5171;&#x529F;&#x80FD;</h6>
+<p>&#x2460; len&#xFF1A;&#x8BA1;&#x7B97;&#x957F;&#x5EA6;(&#x5B57;&#x7B26;&#x4E32;-&gt;&#x8BA1;&#x7B97;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x5B57;&#x7B26;&#x7684;&#x4E2A;&#x6570;)</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+<span class="hljs-string">&apos;&apos;&apos;
+&#x516C;&#x5171;&#x7684;&#x65B9;&#x6CD5;len:&#x8BA1;&#x7B97;&#x5B57;&#x7B26;&#x4E2A;&#x6570;
+&apos;&apos;&apos;</span>
+v = <span class="hljs-string">&apos;&#x4F60;&#x597D;&#xFF01;&apos;</span>
+print(len(v))
+<span class="hljs-string">&apos;&apos;&apos;
+3
+&apos;&apos;&apos;</span>
+</code></pre>
+<p>&#x2461; &#x7D22;&#x5F15;&#xFF1A;&#x7D22;&#x5F15;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x7684;&#x5143;&#x7D20;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+<span class="hljs-string">&apos;&apos;&apos;
+&#x5B57;&#x7B26;&#x4E32;&#x7D22;&#x5F15;
+&apos;&apos;&apos;</span>
+s = input(<span class="hljs-string">&apos;&#x8F93;&#x5165;&#x5B57;&#x7B26;&#x4E32;&#xFF1A;&apos;</span>)
+s_len = len(s)
+index = <span class="hljs-number">0</span>
+<span class="hljs-keyword">while</span> <span class="hljs-keyword">True</span>:
+    v = s[index]
+    print(v)
+    <span class="hljs-keyword">if</span> index == s_len - <span class="hljs-number">1</span>:
+        <span class="hljs-keyword">break</span>
+    index += <span class="hljs-number">1</span>
+</code></pre>
+<p>&#x2462; &#x5207;&#x7247;&#xFF1A;&#x83B7;&#x53D6;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x7684;&#x7247;&#x6BB5;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+<span class="hljs-string">&apos;&apos;&apos;
+&#x5B57;&#x7B26;&#x4E32;&#x5207;&#x7247;
+&apos;&apos;&apos;</span>
+v = <span class="hljs-string">&apos;thanlon&apos;</span>
+print(v[<span class="hljs-number">1</span>:<span class="hljs-number">3</span>])  <span class="hljs-comment"># &#x5DE6;&#x5F00;&#x53F3;&#x95ED;</span>
+print(v[<span class="hljs-number">1</span>:<span class="hljs-number">-1</span>])
+print(v[<span class="hljs-number">-2</span>:<span class="hljs-number">-1</span>])
+print(v[<span class="hljs-number">1</span>:])
+print(v[:<span class="hljs-number">-1</span>])
+print(v[:])
+<span class="hljs-string">&apos;&apos;&apos;
+ha
+hanlo
+o
+hanlon
+thanlo
+thanlon
+&apos;&apos;&apos;</span>
+</code></pre>
+<p>&#x2463; &#x6B65;&#x957F;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+v = <span class="hljs-string">&apos;thanlon&apos;</span>
+print(v[<span class="hljs-number">0</span>:<span class="hljs-number">7</span>:<span class="hljs-number">2</span>])
+<span class="hljs-string">&apos;&apos;&apos;
+taln
+&apos;&apos;&apos;</span>
+</code></pre>
+<p>&#x2464; for&#x5FAA;&#x73AF;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+v = <span class="hljs-string">&apos;thanlon&apos;</span>
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> v:
+    print(i)
+<span class="hljs-string">&apos;&apos;&apos;
+t
+h
+a
+n
+l
+o
+n
+&apos;&apos;&apos;</span>
+</code></pre>
+<h6 id="32-&#x5B57;&#x7B26;&#x4E32;&#x72EC;&#x6709;&#x529F;&#x80FD;">3.2 &#x5B57;&#x7B26;&#x4E32;&#x72EC;&#x6709;&#x529F;&#x80FD;</h6>
+<p>&#x2460; upper&#xFF1A;&#x5C06;&#x5B57;&#x7B26;&#x4E32;&#x8F6C;&#x6362;&#x4E3A;&#x5927;&#x5199;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+v = <span class="hljs-string">&apos;Thanlon&apos;</span>
+print(v.upper())
+<span class="hljs-string">&apos;&apos;&apos;
+THANLON
+&apos;&apos;&apos;</span>
+</code></pre>
+<p>&#x2461; lower&#xFF1A;&#x5C06;&#x5B57;&#x7B26;&#x4E32;&#x8F6C;&#x4E3A;&#x5C0F;&#x5199;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+v = <span class="hljs-string">&apos;Thanlon&apos;</span>
+print(v.lower())
+<span class="hljs-string">&apos;&apos;&apos;
+thanlon
+&apos;&apos;&apos;</span>
+</code></pre>
+<p>&#x2462; split&#x3001;rsplit&#xFF1A;&#x5207;&#x5272;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+<span class="hljs-string">&apos;&apos;&apos;
+split&#x3001;rsplit&#x65B9;&#x6CD5;&#xFF1A;&#x5207;&#x5272;
+&apos;&apos;&apos;</span>
+msg = <span class="hljs-string">&apos;&#x4F60;&#x662F;&#x4E2A;&#x7B28;&#x86CB;&#x5417;&#xFF1F;&#x4F60;&#x662F;&#x4E2A;&#x7B28;&#x86CB;&#x5417;&#xFF1F;&#x4F60;&#x662F;&#x4E2A;&#x7B28;&#x86CB;&#x5417;&#xFF1F;&apos;</span>
+print(msg.split(<span class="hljs-string">&apos;&#xFF1F;&apos;</span>))  <span class="hljs-comment"># &#x4ECE;&#x5DE6;&#x5411;&#x53F3;&#x5207;&#x5272;&#x6240;&#x6709;</span>
+print(msg.split(<span class="hljs-string">&apos;&#xFF1F;&apos;</span>, <span class="hljs-number">1</span>))  <span class="hljs-comment"># &#x4ECE;&#x5DE6;&#x5411;&#x53F3;&#x5207;&#x5272;&#xFF0C;&#x4ECE;&#x7B2C;&#x4E00;&#x4E2A;&#xFF1F;&#x5F00;&#x59CB;&#x5207;&#x5272;</span>
+print(msg.rsplit(<span class="hljs-string">&apos;&#xFF1F;&apos;</span>))  <span class="hljs-comment"># &#x4ECE;&#x53F3;&#x5411;&#x5DE6;&#x5207;&#x5272;&#x6240;&#x6709;&#xFF0C;&#x4ECE;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#xFF1F;&#x5F00;&#x59CB;&#x5207;&#x5272;</span>
+print(msg.rsplit(<span class="hljs-string">&apos;&#xFF1F;&apos;</span>, <span class="hljs-number">1</span>))  <span class="hljs-comment"># &#x4ECE;&#x53F3;&#x5411;&#x5DE6;&#x5207;&#x5272;</span>
+<span class="hljs-string">&apos;&apos;&apos;
+[&apos;&#x4F60;&#x662F;&#x4E2A;&#x7B28;&#x86CB;&#x5417;&apos;, &apos;&#x4F60;&#x662F;&#x4E2A;&#x7B28;&#x86CB;&#x5417;&apos;, &apos;&#x4F60;&#x662F;&#x4E2A;&#x7B28;&#x86CB;&#x5417;&apos;, &apos;&apos;]
+[&apos;&#x4F60;&#x662F;&#x4E2A;&#x7B28;&#x86CB;&#x5417;&apos;, &apos;&#x4F60;&#x662F;&#x4E2A;&#x7B28;&#x86CB;&#x5417;&#xFF1F;&#x4F60;&#x662F;&#x4E2A;&#x7B28;&#x86CB;&#x5417;&#xFF1F;&apos;]
+[&apos;&#x4F60;&#x662F;&#x4E2A;&#x7B28;&#x86CB;&#x5417;&apos;, &apos;&#x4F60;&#x662F;&#x4E2A;&#x7B28;&#x86CB;&#x5417;&apos;, &apos;&#x4F60;&#x662F;&#x4E2A;&#x7B28;&#x86CB;&#x5417;&apos;, &apos;&apos;]
+[&apos;&#x4F60;&#x662F;&#x4E2A;&#x7B28;&#x86CB;&#x5417;&#xFF1F;&#x4F60;&#x662F;&#x4E2A;&#x7B28;&#x86CB;&#x5417;&#xFF1F;&#x4F60;&#x662F;&#x4E2A;&#x7B28;&#x86CB;&#x5417;&apos;, &apos;&apos;]
+&apos;&apos;&apos;</span>
+</code></pre>
+<p>&#x2463; strip&#xFF1A;&#x53BB;&#x9664;&#x5B57;&#x7B26;&#x4E32;&#x5DE6;&#x53F3;&#x591A;&#x4F59;&#x7684;&#x7A7A;&#x683C;</p>
+<pre><code class="lang-python"><span class="hljs-string">&apos;&apos;&apos;
+strip()&#x5220;&#x9664;&#x5DE6;&#x53F3;&#x7684;&#x7A7A;&#x767D;&#x5B57;&#x7B26;&#x4E32;
+lstrip()&#x5220;&#x9664;&#x5DE6;&#x53F3;&#x7684;&#x7A7A;&#x767D;&#x5B57;&#x7B26;&#x4E32;
+lstrip()&#x5220;&#x9664;&#x7684;&#x7A7A;&#x767D;&#x5B57;&#x7B26;&#x4E32;
+&apos;&apos;&apos;</span>
+name = input(<span class="hljs-string">&apos;&#x8BF7;&#x8F93;&#x5165;&#x7528;&#x6237;&#x540D;&#xFF1A;&apos;</span>)
+print(<span class="hljs-string">&apos;----&gt;&apos;</span> + name + <span class="hljs-string">&apos;&lt;----&apos;</span>)
+print(<span class="hljs-string">&apos;----&gt;&apos;</span> + name.strip() + <span class="hljs-string">&apos;&lt;----&apos;</span>)
+print(<span class="hljs-string">&apos;----&gt;&apos;</span> + name.lstrip() + <span class="hljs-string">&apos;&lt;----&apos;</span>)
+print(<span class="hljs-string">&apos;----&gt;&apos;</span> + name.rstrip() + <span class="hljs-string">&apos;&lt;----&apos;</span>)
+<span class="hljs-string">&apos;&apos;&apos;
+&#x8BF7;&#x8F93;&#x5165;&#x7528;&#x6237;&#x540D;&#xFF1A; thanlon 
+----&gt; thanlon &lt;----
+----&gt;thanlon&lt;----
+----&gt;thanlon &lt;----
+----&gt; thanlon&lt;----
+&apos;&apos;&apos;</span>
+</code></pre>
+<p>&#x2464; replace&#xFF1A;&#x66FF;&#x6362;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+<span class="hljs-string">&apos;&apos;&apos;
+replace&#x65B9;&#x6CD5;&#xFF1A;&#x66FF;&#x6362;
+&apos;&apos;&apos;</span>
+msg = <span class="hljs-string">&apos;&#x4F60;&#x662F;&#x4E2A;&#x7B28;&#x86CB;&#x5417;&#xFF1F;&#x4F60;&#x662F;&#x4E2A;&#x7B28;&#x86CB;&#x5417;&#xFF1F;&#x4F60;&#x662F;&#x4E2A;&#x7B28;&#x86CB;&#x5417;&#xFF1F;&apos;</span>
+print(msg)
+print(msg.replace(<span class="hljs-string">&apos;&#x7B28;&#x86CB;&apos;</span>, <span class="hljs-string">&apos;**&apos;</span>))  <span class="hljs-comment"># &#x66FF;&#x6362;&#x6240;&#x6709;&apos;&apos;&#x7B28;&#x86CB;&apos;</span>
+print(msg.replace(<span class="hljs-string">&apos;&#x7B28;&#x86CB;&apos;</span>, <span class="hljs-string">&apos;**&apos;</span>, <span class="hljs-number">1</span>))  <span class="hljs-comment"># &#x53EA;&#x66FF;&#x6362;&#x7B2C;&#x4E00;&#x4E2A;&apos;&apos;&#x7B28;&#x86CB;&apos;</span>
+<span class="hljs-string">&apos;&apos;&apos;
+&#x4F60;&#x662F;&#x4E2A;&#x7B28;&#x86CB;&#x5417;&#xFF1F;&#x4F60;&#x662F;&#x4E2A;&#x7B28;&#x86CB;&#x5417;&#xFF1F;&#x4F60;&#x662F;&#x4E2A;&#x7B28;&#x86CB;&#x5417;&#xFF1F;
+&#x4F60;&#x662F;&#x4E2A;**&#x5417;&#xFF1F;&#x4F60;&#x662F;&#x4E2A;**&#x5417;&#xFF1F;&#x4F60;&#x662F;&#x4E2A;**&#x5417;&#xFF1F;
+&#x4F60;&#x662F;&#x4E2A;**&#x5417;&#xFF1F;&#x4F60;&#x662F;&#x4E2A;&#x7B28;&#x86CB;&#x5417;&#xFF1F;&#x4F60;&#x662F;&#x4E2A;&#x7B28;&#x86CB;&#x5417;&#xFF1F;
+&apos;&apos;&apos;</span>
+</code></pre>
+<p>&#x2465; isdigit&#xFF1A;&#x5224;&#x65AD;&#x662F;&#x5426;&#x662F;&#x6570;&#x5B57;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+<span class="hljs-comment"># isdigit&#xFF1A;&#x65B9;&#x6CD5;&#x5224;&#x65AD;&#x662F;&#x5426;&#x662F;&#x6570;&#x5B57;</span>
+<span class="hljs-keyword">while</span> <span class="hljs-keyword">True</span>:
+    print(<span class="hljs-string">&apos;&apos;&apos;
+    1.&#x4F59;&#x989D;&#x67E5;&#x8BE2;
+    2.&#x4E1A;&#x52A1;&#x529E;&#x7406;
+    &apos;&apos;&apos;</span>)
+    num = input(<span class="hljs-string">&apos;&#x8BF7;&#x9009;&#x62E9;&#x670D;&#x52A1;:&apos;</span>)
+    <span class="hljs-keyword">if</span> num.isdigit():
+        print(int(num))
+    <span class="hljs-keyword">else</span>:
+        print(<span class="hljs-string">&apos;&#x8BF7;&#x8F93;&#x5165;&#x6570;&#x5B57;&#xFF01;&apos;</span>)
+</code></pre>
+<p>&#x2466; startswith</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+<span class="hljs-string">&apos;&apos;&apos;
+startswith
+&apos;&apos;&apos;</span>
+name = <span class="hljs-string">&apos;thanlon&apos;</span>
+v = name[<span class="hljs-number">0</span>:<span class="hljs-number">2</span>]
+<span class="hljs-keyword">if</span> v == <span class="hljs-string">&apos;th&apos;</span>:
+    print(<span class="hljs-string">&apos;&#x662F;&#x4EE5;%s&#x5F00;&#x5934;&#xFF01;&apos;</span> % v)
+<span class="hljs-keyword">else</span>:
+    print(<span class="hljs-string">&apos;&#x4E0D;&#x662F;&#x4EE5;%s&#x5F00;&#x5934;&#xFF01;&apos;</span> % v)
+<span class="hljs-string">&apos;&apos;&apos;
+True
+&apos;&apos;&apos;</span>
+</code></pre>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+<span class="hljs-string">&apos;&apos;&apos;
+startswith&#x4E0E;endswith
+&apos;&apos;&apos;</span>
+v = <span class="hljs-string">&apos;thanlon&apos;</span>
+flag = v.startswith(<span class="hljs-string">&apos;th&apos;</span>)
+print(flag)
+<span class="hljs-string">&apos;&apos;&apos;
+True
+&apos;&apos;&apos;</span>
+</code></pre>
+<p>&#x2467; endswith</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+<span class="hljs-string">&apos;&apos;&apos;
+endswith
+&apos;&apos;&apos;</span>
+name = <span class="hljs-string">&apos;thanlon&apos;</span>
+v = name[<span class="hljs-number">5</span>:]
+<span class="hljs-keyword">if</span> v == <span class="hljs-string">&apos;on&apos;</span>:
+    print(<span class="hljs-string">&apos;&#x662F;&#x4EE5;%s&#x7ED3;&#x5C3E;&#xFF01;&apos;</span> % v)
+<span class="hljs-keyword">else</span>:
+    print(<span class="hljs-string">&apos;&#x4E0D;&#x662F;&#x4EE5;%s&#x7ED3;&#x5C3E;&#xFF01;&apos;</span> % v)
+<span class="hljs-string">&apos;&apos;&apos;
+True
+&apos;&apos;&apos;</span>
+</code></pre>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+<span class="hljs-string">&apos;&apos;&apos;
+endswith
+&apos;&apos;&apos;</span>
+name = <span class="hljs-string">&apos;thanlon&apos;</span>
+flag = name.endswith(<span class="hljs-string">&apos;on&apos;</span>)
+<span class="hljs-keyword">if</span> flag:
+    print(<span class="hljs-string">&apos;&#x662F;&#x4EE5;on&#x7ED3;&#x5C3E;&#xFF01;&apos;</span>)
+<span class="hljs-keyword">else</span>:
+    print(<span class="hljs-string">&apos;&#x4E0D;&#x662F;&#x4EE5;on&#x7ED3;&#x5C3E;&#xFF01;&apos;</span>)
+<span class="hljs-string">&apos;&apos;&apos;
+True
+&apos;&apos;&apos;</span>
+</code></pre>
+<p>&#x2468; format</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+<span class="hljs-string">&apos;&apos;&apos;
+format
+&apos;&apos;&apos;</span>
+print(<span class="hljs-string">&apos;wow,{}&apos;</span>.format(<span class="hljs-string">&apos;thanlon&apos;</span>))
+<span class="hljs-string">&apos;&apos;&apos;
+wow,thanlon
+&apos;&apos;&apos;</span>
+</code></pre>
+<p>&#x2469; join</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+<span class="hljs-string">&apos;&apos;&apos;
+join
+&apos;&apos;&apos;</span>
+name = <span class="hljs-string">&apos;thanlon&apos;</span>  <span class="hljs-comment"># &#x89E3;&#x91CA;&#x5668;&#x8BFB;&#x53D6;&#x5230;&#x5185;&#x5B58;&#x540E;&#xFF0C;&#x6309;&#x7167;unicode&#x7F16;&#x7801;&#x5B58;&#x50A8;&#xFF0C;&#x5360;&#x7528;7x4b=28b</span>
+r = <span class="hljs-string">&apos;_&apos;</span>.join(name)
+print(r)
+<span class="hljs-string">&apos;&apos;&apos;
+t_h_a_n_l_o_n
+&apos;&apos;&apos;</span>
+</code></pre>
+<p>&#x2469; encode</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+<span class="hljs-string">&apos;&apos;&apos;
+encode
+&apos;&apos;&apos;</span>
+name = <span class="hljs-string">&apos;thanlon&apos;</span>  <span class="hljs-comment"># &#x89E3;&#x91CA;&#x5668;&#x8BFB;&#x53D6;&#x5230;&#x5185;&#x5B58;&#x540E;&#xFF0C;&#x6309;&#x7167;unicode&#x7F16;&#x7801;&#x5B58;&#x50A8;&#xFF0C;&#x5360;&#x7528;7x4b=28b</span>
+v1 = name.encode(<span class="hljs-string">&apos;utf-8&apos;</span>)
+print(v1)
+<span class="hljs-string">&apos;&apos;&apos;
+b&apos;thanlon&apos;
+&apos;&apos;&apos;</span>
+v2 = name.encode(<span class="hljs-string">&apos;gbk&apos;</span>)
+print(v2)
+<span class="hljs-string">&apos;&apos;&apos;
+b&apos;thanlon
+&apos;&apos;&apos;</span>
+</code></pre>
+<h6 id="33-&#x5B57;&#x7B26;&#x4E32;&#x7EC3;&#x4E60;">3.3 &#x5B57;&#x7B26;&#x4E32;&#x7EC3;&#x4E60;</h6>
+<p>&#x2460; &#x8BF7;&#x5C06;&#x5B57;&#x7B26;&#x4E32;&#x53CD;&#x8F6C;&#xFF08;&#x7B14;&#x8BD5;&#x9898;&#xFF09;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+<span class="hljs-string">&apos;&apos;&apos;
+&#x65B9;&#x5F0F;1
+&apos;&apos;&apos;</span>
+v = <span class="hljs-string">&apos;Thanlon&apos;</span>
+index = len(v) - <span class="hljs-number">1</span>
+<span class="hljs-keyword">while</span> index &gt;= <span class="hljs-number">0</span>:
+    print(v[index])
+    index -= <span class="hljs-number">1</span>
+<span class="hljs-string">&apos;&apos;&apos;
+&#x65B9;&#x5F0F;2
+&apos;&apos;&apos;</span>
+v = <span class="hljs-string">&apos;Thanlon&apos;</span>
+print(v[::<span class="hljs-number">-1</span>])  <span class="hljs-comment"># &#x6216;print(v[-1::-1])</span>
+</code></pre>
+<p>&#x2461; &#x5224;&#x65AD;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x662F;&#x5426;&#x542B;&#x6709;&#x654F;&#x611F;&#x5B57;&#x7B26;&#xFF1F;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+info = <span class="hljs-string">&apos;thanlonkiku&apos;</span>
+<span class="hljs-keyword">if</span> <span class="hljs-string">&apos;kiku&apos;</span> <span class="hljs-keyword">in</span> info:
+    print(<span class="hljs-string">&apos;right!&apos;</span>)
+<span class="hljs-string">&apos;&apos;&apos;
+right!
+&apos;&apos;&apos;</span>
+</code></pre>
+<h6 id="34-&#x5B57;&#x7B26;&#x4E32;&#x4E0E;&#x4E8C;&#x8FDB;&#x5236;&#x76F8;&#x4E92;&#x8F6C;&#x6362;">3.4 &#x5B57;&#x7B26;&#x4E32;&#x4E0E;&#x4E8C;&#x8FDB;&#x5236;&#x76F8;&#x4E92;&#x8F6C;&#x6362;</h6>
+<p>&#x2460; &#x5B57;&#x7B26;&#x4E32;&#x8F6C;&#x4E8C;&#x8FDB;&#x5236;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+<span class="hljs-string">&apos;&apos;&apos;&apos;
+&#x5B57;&#x7B26;&#x4E32;&#x8F6C;&#x4E8C;&#x8FDB;&#x5236;
+&apos;&apos;&apos;</span>
+v = <span class="hljs-string">&apos;&#x4E00;&#x95EE;&#x5948;&#x4F55;&apos;</span>
+v2 = <span class="hljs-string">&apos;thanlon&apos;</span>
+data = v.encode(<span class="hljs-string">&apos;utf-8&apos;</span>)
+data2 = v2.encode(<span class="hljs-string">&apos;utf-8&apos;</span>)
+print(data)
+print(data2)
+<span class="hljs-string">&apos;&apos;&apos;
+b&apos;\xe4\xb8\x80\xe9\x97\xae\xe5\xa5\x88\xe4\xbd\x95&apos;
+b&apos;thanlon&apos;
+&apos;&apos;&apos;</span>
+</code></pre>
+<p>&#x2461; &#x4E8C;&#x8FDB;&#x5236;&#x8F6C;&#x5B57;&#x7B26;&#x4E32;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+<span class="hljs-string">&apos;&apos;&apos;&apos;
+&#x4E8C;&#x8FDB;&#x5236;&#x8F6C;&#x5B57;&#x7B26;&#x4E32;
+&apos;&apos;&apos;</span>
+v = <span class="hljs-string">b&apos;\xe4\xb8\x80\xe9\x97\xae\xe5\xa5\x88\xe4\xbd\x95&apos;</span>
+v2 = <span class="hljs-string">b&apos;thanlon&apos;</span>
+data = v.decode(<span class="hljs-string">&apos;utf-8&apos;</span>)
+data2 = v2.decode(<span class="hljs-string">&apos;utf-8&apos;</span>)
+print(data)
+print(data2)
+<span class="hljs-string">&apos;&apos;&apos;
+&#x4E00;&#x95EE;&#x5948;&#x4F55;
+thanlon
+&apos;&apos;&apos;</span>
+</code></pre>
+<h5 id="4-&#x5217;&#x8868;">4. &#x5217;&#x8868;</h5>
+<h6 id="41-&#x516C;&#x5171;&#x529F;&#x80FD;">4.1 &#x516C;&#x5171;&#x529F;&#x80FD;</h6>
+<p> &#x2460; len</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+users = [<span class="hljs-string">&apos;Thanlon&apos;</span>, <span class="hljs-string">&apos;Kiku&apos;</span>]
+print(len(users))
+<span class="hljs-string">&apos;&apos;&apos;
+2
+&apos;&apos;&apos;</span>
+</code></pre>
+<p>&#x2461; &#x7D22;&#x5F15;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+users = [<span class="hljs-string">&apos;Thanlon&apos;</span>, <span class="hljs-string">&apos;Kiku&apos;</span>]
+print(users[<span class="hljs-number">1</span>])
+<span class="hljs-string">&apos;&apos;&apos;
+Kiku
+&apos;&apos;&apos;</span>
+</code></pre>
+<p>&#x2462; &#x5207;&#x7247;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+users = [<span class="hljs-string">&apos;Thanlon&apos;</span>, <span class="hljs-string">&apos;Kiku&apos;</span>]
+print(users[<span class="hljs-number">0</span>:<span class="hljs-number">1</span>])
+<span class="hljs-string">&apos;&apos;&apos;
+[&apos;Thanlon&apos;]
+&apos;&apos;&apos;</span>
+</code></pre>
+<p>&#x2463; &#x6B65;&#x957F;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+users = [<span class="hljs-string">&apos;Thanlon&apos;</span>, <span class="hljs-string">&apos;Kiku&apos;</span>,<span class="hljs-string">&apos;Haha&apos;</span>]
+print(users[<span class="hljs-number">0</span>::<span class="hljs-number">2</span>])
+<span class="hljs-string">&apos;&apos;&apos;
+[&apos;Thanlon&apos;]
+&apos;&apos;&apos;</span>
+</code></pre>
+<p>&#x2464; for&#x5FAA;&#x73AF;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+users = [<span class="hljs-string">&apos;Thanlon&apos;</span>, <span class="hljs-string">&apos;Kiku&apos;</span>, <span class="hljs-string">&apos;Haha&apos;</span>]
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> users:
+    print(i)
+<span class="hljs-string">&apos;&apos;&apos;
+Thanlon
+Kiku
+Haha
+&apos;&apos;&apos;</span>
+</code></pre>
+<h6 id="42-&#x5217;&#x8868;&#x72EC;&#x6709;&#x529F;&#x80FD;">4.2 &#x5217;&#x8868;&#x72EC;&#x6709;&#x529F;&#x80FD;</h6>
+<p>&#x2460; append&#xFF1A;&#x5728;&#x5217;&#x8868;&#x7684;&#x6700;&#x540E;&#x8FFD;&#x52A0;&#x4E00;&#x4E2A;&#x5143;&#x7D20;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># codeing:utf-8</span>
+users = []
+users.append(<span class="hljs-string">&apos;Thanlon&apos;</span>)
+print(users)
+<span class="hljs-string">&apos;&apos;&apos;
+[&apos;Thanlon&apos;]
+&apos;&apos;&apos;</span>
+</code></pre>
+<p>&#x2461; insert&#xFF1A;&#x5728;&#x6307;&#x5B9A;&#x7D22;&#x5F15;&#x4F4D;&#x7F6E;&#x63D2;&#x5165;&#x5143;&#x7D20;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># codeing:utf-8</span>
+<span class="hljs-string">&apos;&apos;&apos;
+&#x5728;&#x6307;&#x5B9A;&#x7D22;&#x5F15;&#x4F4D;&#x7F6E;&#x63D2;&#x5165;&#x5143;&#x7D20;
+&apos;&apos;&apos;</span>
+users = [<span class="hljs-string">&apos;thanlon&apos;</span>]
+users.insert(<span class="hljs-number">0</span>, <span class="hljs-string">&apos;Kiku&apos;</span>)  <span class="hljs-comment"># &#x5728;&#x7B2C;0&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x4F4D;&#x7F6E;&#x52A0;&#x5165;</span>
+print(users)
+<span class="hljs-string">&apos;&apos;&apos;
+[&apos;Kiku&apos;, &apos;thanlon&apos;]
+&apos;&apos;&apos;</span>
+</code></pre>
+<p>&#x2462; pop</p>
+<pre><code class="lang-python"><span class="hljs-comment"># codeing:utf-8</span>
+<span class="hljs-string">&apos;&apos;&apos;
+&#x5220;&#x9664;&#x6307;&#x5B9A;&#x7D22;&#x5F15;&#x7684;&#x6587;&#x4EF6;
+&apos;&apos;&apos;</span>
+<span class="hljs-comment"># codeing:utf-8</span>
+<span class="hljs-string">&apos;&apos;&apos;
+&#x5220;&#x9664;&#x6307;&#x5B9A;&#x7D22;&#x5F15;&#x7684;&#x6587;&#x4EF6;
+&apos;&apos;&apos;</span>
+users = [<span class="hljs-string">&apos;Kiku&apos;</span>, <span class="hljs-string">&apos;thanlon&apos;</span>, <span class="hljs-string">&apos;Kiku&apos;</span>]
+users.pop(<span class="hljs-number">0</span>)
+print(users)
+users.pop()  <span class="hljs-comment"># &#x5220;&#x9664;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5143;&#x7D20;</span>
+print(users)
+<span class="hljs-string">&apos;&apos;&apos;
+[&apos;thanlon&apos;, &apos;Kiku&apos;]
+[&apos;thanlon&apos;]
+&apos;&apos;&apos;</span>
+</code></pre>
+<p>&#x2463; remove</p>
+<pre><code class="lang-python"><span class="hljs-comment"># codeing:utf-8</span>
+<span class="hljs-string">&apos;&apos;&apos;
+&#x5220;&#x9664;&#x6307;&#x5B9A;&#x5143;&#x7D20;
+&apos;&apos;&apos;</span>
+users = [<span class="hljs-string">&apos;Kiku&apos;</span>, <span class="hljs-string">&apos;thanlon&apos;</span>, <span class="hljs-string">&apos;Kiku&apos;</span>]
+users.remove(<span class="hljs-string">&apos;Kiku&apos;</span>)  <span class="hljs-comment"># &#x53EA;&#x80FD;&#x5220;&#x9664;&#x7B2C;&#x4E00;&#x4E2A;&apos;Kiku&apos;</span>
+print(users)
+<span class="hljs-string">&apos;&apos;&apos;
+[&apos;thanlon&apos;, &apos;Kiku&apos;]
+&apos;&apos;&apos;</span>
+</code></pre>
+<p>&#x2464; clear</p>
+<pre><code class="lang-python"><span class="hljs-comment"># codeing:utf-8</span>
+<span class="hljs-string">&apos;&apos;&apos;
+&#x5220;&#x9664;&#x6240;&#x6709;&#x5143;&#x7D20;
+&apos;&apos;&apos;</span>
+users = [<span class="hljs-string">&apos;Kiku&apos;</span>, <span class="hljs-string">&apos;thanlon&apos;</span>, <span class="hljs-string">&apos;Kiku&apos;</span>]
+print(users)
+users.clear()
+print(users)
+<span class="hljs-string">&apos;&apos;&apos;
+[&apos;Kiku&apos;, &apos;thanlon&apos;, &apos;Kiku&apos;]
+[]
+&apos;&apos;&apos;</span>
+</code></pre>
+<p>&#x2465; extend&#xFF1A;&#x5728;&#x5217;&#x8868;&#x4E2D;&#x8FFD;&#x52A0;&#x4E00;&#x4E2A;&#x5217;&#x8868;/&#x5143;&#x7EC4;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+users = [<span class="hljs-string">&apos;Thanlon&apos;</span>, <span class="hljs-string">&apos;Kiku&apos;</span>]
+ex = [<span class="hljs-string">&apos;Haha&apos;</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>]  <span class="hljs-comment"># &#x6216; (&apos;Haha&apos;, 1, 2)</span>
+users.extend(ex)
+print(users)
+<span class="hljs-string">&apos;&apos;&apos;
+[&apos;Thanlon&apos;, &apos;Kiku&apos;, &apos;Haha&apos;, 1, 2]
+&apos;&apos;&apos;</span>
+</code></pre>
+<p>&#x2466; del &#x5217;&#x8868;[&#x7D22;&#x5F15;]&#xFF1A;&#x5220;&#x9664;&#x6307;&#x5B9A;&#x7D22;&#x5F15;&#x7684;&#x5143;&#x7D20;(&#x4E0E;pop&#x65B9;&#x6CD5;&#x4E0D;&#x540C;&#x7684;&#x662F;&#x5FC5;&#x987B;&#x5F97;&#x52A0;&#x7D22;&#x5F15;)</p>
+<pre><code class="lang-python"><span class="hljs-comment"># codeing:utf-8</span>
+<span class="hljs-string">&apos;&apos;&apos;
+del&#x8BED;&#x6CD5;&#x5220;&#x9664;&#x6307;&#x5B9A;&#x5143;&#x7D20;
+&apos;&apos;&apos;</span>
+users = [<span class="hljs-string">&apos;Kiku&apos;</span>, <span class="hljs-string">&apos;thanlon&apos;</span>, <span class="hljs-string">&apos;Kiku&apos;</span>]
+<span class="hljs-keyword">del</span> users[<span class="hljs-number">0</span>]
+print(users)
+<span class="hljs-string">&apos;&apos;&apos;
+[&apos;thanlon&apos;, &apos;Kiku&apos;]
+&apos;&apos;&apos;</span>
+</code></pre>
+<p>&#x2467; &#x5217;&#x8868;&#x7684;&#x4FEE;&#x6539;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># codeing:utf-8</span>
+users = [<span class="hljs-string">&apos;thanlon&apos;</span>, <span class="hljs-string">&apos;Kiku&apos;</span>]
+users[<span class="hljs-number">0</span>] = <span class="hljs-string">&apos;T&apos;</span>
+users[<span class="hljs-number">1</span>] = <span class="hljs-string">&apos;K&apos;</span>
+print(users)
+<span class="hljs-string">&apos;&apos;&apos;
+[&apos;T&apos;, &apos;K&apos;]
+&apos;&apos;&apos;</span>
+</code></pre>
+<p>&#x2468; join([&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#xFF0C;&#xFF0C;])</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+<span class="hljs-string">&apos;&apos;&apos;
+join([&#x5B57;&#x7B26;&#x4E32;,&#x5B57;&#x7B26;&#x4E32;,])
+&apos;&apos;&apos;</span>
+name = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>]
+<span class="hljs-keyword">for</span> item <span class="hljs-keyword">in</span> range(<span class="hljs-number">0</span>, len(name)):
+    name[item] = str(name[item])
+result = <span class="hljs-string">&apos;&apos;</span>.join(name)
+result2 = <span class="hljs-string">&apos;,&apos;</span>.join(name)
+print(result)
+print(result2)
+<span class="hljs-string">&apos;&apos;&apos;
+123456
+1,2,3,4,5,6
+&apos;&apos;&apos;</span>
+</code></pre>
+<p>&#x2469; reverse&#xFF1A;&#x53CD;&#x8F6C;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+<span class="hljs-string">&apos;&apos;&apos;
+reverse
+&apos;&apos;&apos;</span>
+info = [<span class="hljs-string">&apos;thnalon&apos;</span>, <span class="hljs-string">&apos;kiku&apos;</span>]
+print(info)
+info.reverse()
+print(info)
+<span class="hljs-string">&apos;&apos;&apos;
+[&apos;thnalon&apos;, &apos;kiku&apos;]
+[&apos;kiku&apos;, &apos;thnalon&apos;]
+&apos;&apos;&apos;</span>
+</code></pre>
+<p>&#x2469; sort&#xFF1A;&#x6392;&#x5E8F;&#xFF08;&#x5217;&#x8868;&#x4E2D;&#x9700;&#x8981;&#x662F;&#x6570;&#x5B57;&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#xFF09;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+<span class="hljs-string">&apos;&apos;&apos;
+sort&#x6392;&#x5E8F;
+&apos;&apos;&apos;</span>
+info = [<span class="hljs-number">4</span>, <span class="hljs-number">2</span>, <span class="hljs-number">5</span>]
+print(info)
+info.sort(reverse=<span class="hljs-keyword">False</span>)  <span class="hljs-comment"># &#x4ECE;&#x5C0F;&#x5230;&#x5927;&#x6392;&#x5217;&#xFF08;&#x9ED8;&#x8BA4;&#xFF09;</span>
+print(info)
+info.sort(reverse=<span class="hljs-keyword">True</span>)  <span class="hljs-comment"># &#x4ECE;&#x5927;&#x5230;&#x5C0F;&#x6392;&#x5217;&#xFF08;&#x9ED8;&#x8BA4;&#xFF09;</span>
+print(info)
+<span class="hljs-string">&apos;&apos;&apos;
+[4, 2, 5]
+[2, 4, 5]
+[5, 4, 2]
+&apos;&apos;&apos;</span>
+</code></pre>
+<h6 id="43-&#x5217;&#x8868;&#x7EC3;&#x4E60;">4.3 &#x5217;&#x8868;&#x7EC3;&#x4E60;</h6>
+<p>&#x2460; &#x5217;&#x8868;&#x7684;&#x5D4C;&#x5957;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># codeing:utf-8</span>
+users = [<span class="hljs-string">&apos;thanlon&apos;</span>, <span class="hljs-string">&apos;Kiku&apos;</span>, [<span class="hljs-number">66</span>, <span class="hljs-string">&apos;thanlon&apos;</span>, <span class="hljs-string">&apos;Kiku&apos;</span>, [<span class="hljs-string">&apos;thanlon&apos;</span>, <span class="hljs-string">&apos;Kiku&apos;</span>]]]
+print(users[<span class="hljs-number">-1</span>])
+print(users[<span class="hljs-number">-1</span>][<span class="hljs-number">-1</span>])
+print(users[<span class="hljs-number">-1</span>][<span class="hljs-number">-1</span>][<span class="hljs-number">0</span>])
+print(users[<span class="hljs-number">-1</span>][<span class="hljs-number">-1</span>][<span class="hljs-number">0</span>][<span class="hljs-number">0</span>:<span class="hljs-number">-2</span>])
+<span class="hljs-string">&apos;&apos;&apos;
+[66, &apos;thanlon&apos;, &apos;Kiku&apos;, [&apos;thanlon&apos;, &apos;Kiku&apos;]]
+[&apos;thanlon&apos;, &apos;Kiku&apos;]
+thanlon
+thanl
+&apos;&apos;&apos;</span>
+</code></pre>
+<p>&#x2461; &#x5224;&#x65AD;&#x5217;&#x8868;&#x4E2D;&#x662F;&#x5426;&#x542B;&#x6709;&#x654F;&#x611F;&#x5143;&#x7D20;&#xFF1F;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+info = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-string">&apos;thanlon&apos;</span>]
+<span class="hljs-keyword">if</span> <span class="hljs-number">1</span> <span class="hljs-keyword">in</span> info:
+    print(<span class="hljs-string">&apos;right!&apos;</span>)
+<span class="hljs-string">&apos;&apos;&apos;
+right!
+&apos;&apos;&apos;</span>
+</code></pre>
+<h5 id="5-&#x5143;&#x7EC4;">5. &#x5143;&#x7EC4;</h5>
+<h6 id="51-&#x516C;&#x5171;&#x529F;&#x80FD;">5.1 &#x516C;&#x5171;&#x529F;&#x80FD;</h6>
+<p>&#x2460; len</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+users = (<span class="hljs-string">&apos;Thanlon&apos;</span>, <span class="hljs-string">&apos;Kiku&apos;</span>, <span class="hljs-string">&apos;Haha&apos;</span>)
+print(len(users))
+<span class="hljs-string">&apos;&apos;&apos;
+3
+&apos;&apos;&apos;</span>
+</code></pre>
+<p>&#x2461; &#x7D22;&#x5F15;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+users = (<span class="hljs-string">&apos;Thanlon&apos;</span>, <span class="hljs-string">&apos;Kiku&apos;</span>, <span class="hljs-string">&apos;Haha&apos;</span>)
+print(users[<span class="hljs-number">0</span>])
+<span class="hljs-string">&apos;&apos;&apos;
+Thanlon
+&apos;&apos;&apos;</span>
+</code></pre>
+<p>&#x2462; &#x5207;&#x7247;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+users = (<span class="hljs-string">&apos;Thanlon&apos;</span>, <span class="hljs-string">&apos;Kiku&apos;</span>, <span class="hljs-string">&apos;Haha&apos;</span>)
+print(users[<span class="hljs-number">0</span>:<span class="hljs-number">3</span>])
+<span class="hljs-string">&apos;&apos;&apos;
+(&apos;Thanlon&apos;, &apos;Kiku&apos;, &apos;Haha&apos;)
+&apos;&apos;&apos;</span>
+</code></pre>
+<p>&#x2463; &#x6B65;&#x957F;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+users = (<span class="hljs-string">&apos;Thanlon&apos;</span>, <span class="hljs-string">&apos;Kiku&apos;</span>, <span class="hljs-string">&apos;Haha&apos;</span>)
+print(users[<span class="hljs-number">0</span>:<span class="hljs-number">3</span>:<span class="hljs-number">2</span>])
+<span class="hljs-string">&apos;&apos;&apos;
+(&apos;Thanlon&apos;, &apos;Haha&apos;)
+&apos;&apos;&apos;</span>
+</code></pre>
+<p>&#x2464; for&#x5FAA;&#x73AF;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+users = (<span class="hljs-string">&apos;Thanlon&apos;</span>, <span class="hljs-string">&apos;Kiku&apos;</span>, <span class="hljs-string">&apos;Haha&apos;</span>)
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> users:
+    print(i)
+<span class="hljs-string">&apos;&apos;&apos;
+Thanlon
+Kiku
+Haha
+&apos;&apos;&apos;</span>
+</code></pre>
+<h6 id="52-&#x5143;&#x7EC4;&#x72EC;&#x6709;&#x529F;&#x80FD;">5.2 &#x5143;&#x7EC4;&#x72EC;&#x6709;&#x529F;&#x80FD;</h6>
+<h6 id="53-&#x5143;&#x7EC4;&#x7EC3;&#x4E60;">5.3 &#x5143;&#x7EC4;&#x7EC3;&#x4E60;</h6>
+<p>&#x2460; &#x5224;&#x65AD;&#x5143;&#x7EC4;&#x4E2D;&#x662F;&#x5426;&#x542B;&#x6709;&#x654F;&#x611F;&#x5143;&#x7D20;&#xFF1F;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+info = (<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-string">&apos;thanlon&apos;</span>)
+<span class="hljs-keyword">if</span> <span class="hljs-number">1</span> <span class="hljs-keyword">in</span> info:
+    print(<span class="hljs-string">&apos;right!&apos;</span>)
+<span class="hljs-string">&apos;&apos;&apos;
+right!
+&apos;&apos;&apos;</span>
+</code></pre>
+<h5 id="6-&#x5B57;&#x5178;">6. &#x5B57;&#x5178;</h5>
+<h6 id="61-&#x5B57;&#x5178;&#x6982;&#x8FF0;">6.1 &#x5B57;&#x5178;&#x6982;&#x8FF0;</h6>
+<p>&#x5E2E;&#x52A9;&#x7528;&#x6237;&#x53BB;&#x8868;&#x793A;&#x4E00;&#x4E2A;&#x4E8B;&#x7269;&#x7684;&#x4FE1;&#x606F;&#xFF08;&#x4E8B;&#x7269;&#x6709;&#x591A;&#x4E2A;&#x5C5E;&#x6027;&#xFF09;&#x3002;</p>
+</blockquote>
+<p><kbd>info = {&apos;name&apos;: &apos;thanlon&apos;, &apos;age&apos;: 23, &apos;gender&apos;: &apos;&#x7537;&apos;}  # &#x952E;&#x503C;</kbd></p>
+<h6 id="62-&#x5B57;&#x5178;&#x7684;&#x952E;&#x503C;&#x7C7B;&#x578B;">6.2 &#x5B57;&#x5178;&#x7684;&#x952E;&#x503C;&#x7C7B;&#x578B;</h6>
+<p>&#x4EFB;&#x4F55;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x90FD;&#x53EF;&#x4EE5;&#x4F5C;&#x4E3A;&#x5B57;&#x5178;&#x7684;&#x503C;&#xFF0C;&#x4F46;&#x5B57;&#x5178;&#x4E2D;&#x952E;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x4E0D;&#x53EF;&#x4EE5;&#x662F;&#x53EF;&#x53D8;&#x7C7B;&#x578B;&#xFF0C;&#x5982;&#x5217;&#x8868;&#x3001;&#x5B57;&#x5178;&#xFF08;&#x8FD9;&#x4E24;&#x79CD;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x662F;&#x4E0D;&#x53EF;hash&#x7684;&#xFF09;&#x3002;&#x5176;&#x5B83;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x7684;&#x503C;&#x5185;&#x90E8;&#x662F;&#x4E0D;&#x53EF;&#x88AB;&#x4FEE;&#x6539;&#x7684;&#xFF0C;&#x4E5F;&#x5373;&#x662F;&#x4E0D;&#x53EF;&#x53D8;&#x7C7B;&#x578B;&#xFF0C;&#x8FD9;&#x4E9B;&#x90FD;&#x662F;&#x53EF;&#x4EE5;&#x7684;&#x4F5C;&#x4E3A;&#x5B57;&#x5178;&#x7684;&#x952E;&#x3002;</p>
+<h6 id="63-&#x5B57;&#x5178;&#x57FA;&#x672C;&#x683C;&#x5F0F;">6.3 &#x5B57;&#x5178;&#x57FA;&#x672C;&#x683C;&#x5F0F;</h6>
+<p><kbd>info = {&#x952E;:&#x503C;,&#x952E;:&#x503C;,&#x952E;:&#x503C;,&#x952E;:&#x503C;,,,}</kbd></p>
+<h6 id="64-&#x5B57;&#x5178;&#x72EC;&#x6709;&#x529F;&#x80FD;">6.4 &#x5B57;&#x5178;&#x72EC;&#x6709;&#x529F;&#x80FD;</h6>
+<p>&#x2460; keys()&#xFF1A;&#x83B7;&#x53D6;&#x5B57;&#x5178;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x952E;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+<span class="hljs-string">&apos;&apos;&apos;
+keys()
+&apos;&apos;&apos;</span>
+info = {<span class="hljs-string">&apos;name&apos;</span>: <span class="hljs-string">&apos;thanlon&apos;</span>, <span class="hljs-string">&apos;age&apos;</span>: <span class="hljs-number">23</span>, <span class="hljs-string">&apos;gender&apos;</span>: <span class="hljs-string">&apos;&#x7537;&apos;</span>}
+<span class="hljs-keyword">for</span> item <span class="hljs-keyword">in</span> info:
+    print(item)
+print()
+<span class="hljs-keyword">for</span> item <span class="hljs-keyword">in</span> info.keys():
+    print(item)
+<span class="hljs-string">&apos;&apos;&apos;
+name
+age
+gender
+
+name
+age
+gender
+&apos;&apos;&apos;</span>
+</code></pre>
+<p>&#x2461; values()&#xFF1A;&#x83B7;&#x53D6;&#x5B57;&#x5178;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x503C;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+<span class="hljs-string">&apos;&apos;&apos;
+values()
+&apos;&apos;&apos;</span>
+info = {<span class="hljs-string">&apos;name&apos;</span>: <span class="hljs-string">&apos;thanlon&apos;</span>, <span class="hljs-string">&apos;age&apos;</span>: <span class="hljs-number">23</span>, <span class="hljs-string">&apos;gender&apos;</span>: <span class="hljs-string">&apos;&#x7537;&apos;</span>}
+<span class="hljs-keyword">for</span> item <span class="hljs-keyword">in</span> info.values():
+    print(item)
+print()
+<span class="hljs-string">&apos;&apos;&apos;
+thanlon
+23
+&#x7537;
+&apos;&apos;&apos;</span>
+</code></pre>
+<p>&#x2462; items()&#xFF1A;&#x83B7;&#x53D6;&#x5B57;&#x5178;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x952E;&#x503C;&#x5BF9;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+<span class="hljs-string">&apos;&apos;&apos;
+values()
+&apos;&apos;&apos;</span>
+info = {<span class="hljs-string">&apos;name&apos;</span>: <span class="hljs-string">&apos;thanlon&apos;</span>, <span class="hljs-string">&apos;age&apos;</span>: <span class="hljs-number">23</span>, <span class="hljs-string">&apos;gender&apos;</span>: <span class="hljs-string">&apos;&#x7537;&apos;</span>}
+<span class="hljs-keyword">for</span> key, value <span class="hljs-keyword">in</span> info.items():
+    print(key, value)
+<span class="hljs-string">&apos;&apos;&apos;
+name thanlon
+age 23
+gender &#x7537;
+&apos;&apos;&apos;</span>
+</code></pre>
+<pre><code class="lang-python">info = {<span class="hljs-string">&apos;name&apos;</span>: <span class="hljs-string">&apos;thanlon&apos;</span>, <span class="hljs-string">&apos;age&apos;</span>: <span class="hljs-number">23</span>, <span class="hljs-string">&apos;gender&apos;</span>: <span class="hljs-string">&apos;&#x7537;&apos;</span>}
+<span class="hljs-keyword">for</span> item <span class="hljs-keyword">in</span> info.items():
+    print(item)
+<span class="hljs-string">&apos;&apos;&apos;
+(&apos;name&apos;, &apos;thanlon&apos;)
+(&apos;age&apos;, 23)
+(&apos;gender&apos;, &apos;&#x7537;&apos;)
+&apos;&apos;&apos;</span>
+</code></pre>
+<p>&#x2463; get&#xFF1A;&#x83B7;&#x53D6;&#x5B57;&#x5178;&#x4E2D;&#x7684;&#x503C;&#xFF08;&#x516C;&#x53F8;&#x91CC;&#x57FA;&#x672C;&#x4E0A;&#x4F7F;&#x7528;&#x6B64;&#x65B9;&#x5F0F;&#x83B7;&#x53D6;&#x5B57;&#x5178;&#x4E2D;&#x7684;&#x503C;&#xFF09;
+&#x901A;&#x8FC7;&#x7D22;&#x5F15;&#x53BB;&#x53D6;&#x503C;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x6240;&#x53D6;&#x7684;&#x952E;&#xFF0C;&#x5C31;&#x4F1A;&#x62A5;&#x9519;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x5982;&#x679C;&#x901A;&#x8FC7;get&#x65B9;&#x6CD5;&#xFF0C;&#x4E0D;&#x4F1A;&#x62A5;&#x9519;&#x3002;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+<span class="hljs-string">&apos;&apos;&apos;
+get&#x65B9;&#x6CD5;&#xFF0C;None&#x8868;&#x793A;&#x4EC0;&#x4E48;&#x90FD;&#x6CA1;&#x6709;&#xFF0C;&#x8F6C;&#x4E3A;bool&#x7C7B;&#x578B;&#x662F;False
+&apos;&apos;&apos;</span>
+d = {<span class="hljs-string">&apos;name&apos;</span>: <span class="hljs-string">&apos;thanlon&apos;</span>, <span class="hljs-string">&apos;age&apos;</span>: <span class="hljs-number">23</span>}
+<span class="hljs-comment"># v1 = d[&apos;gender&apos;]  # &#x4E0D;&#x5B58;&#x5728;&#x6B64;&#x952E;&#xFF0C;&#x4F1A;&#x62A5;&#x9519;</span>
+v2 = d.get(<span class="hljs-string">&apos;gender&apos;</span>)
+v3 = d.get(<span class="hljs-string">&apos;gender&apos;</span>, <span class="hljs-string">&apos;&#x6CA1;&#x6709;&#x8FD9;&#x4E2A;&#x952E;&#xFF01;&apos;</span>)
+print(v2)  <span class="hljs-comment"># &#x5982;&#x679C;&#x6CA1;&#x6709;&#x53D6;&#x5230;&#x503C;&#xFF0C;&#x9ED8;&#x8BA4;&#x8FD4;&#x56DE;None</span>
+print(v3)
+<span class="hljs-string">&apos;&apos;&apos;
+None
+&#x6CA1;&#x6709;&#x8FD9;&#x4E2A;&#x952E;&#xFF01;
+&apos;&apos;&apos;</span>
+</code></pre>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+d = {<span class="hljs-string">&apos;name&apos;</span>: <span class="hljs-string">&apos;thanlon&apos;</span>, <span class="hljs-string">&apos;age&apos;</span>: <span class="hljs-number">23</span>}
+result = d.get(<span class="hljs-string">&apos;gender&apos;</span>)
+<span class="hljs-comment"># print(result)#None</span>
+<span class="hljs-keyword">if</span> result == <span class="hljs-keyword">None</span>:
+    print(<span class="hljs-string">&apos;&#x4E0D;&#x5B58;&#x5728;&#xFF01;&apos;</span>)
+<span class="hljs-keyword">if</span> result:
+    print(<span class="hljs-string">&apos;&#x5B58;&#x5728;&#xFF01;&apos;</span>)
+<span class="hljs-keyword">else</span>:
+    print(<span class="hljs-string">&apos;&#x4E0D;&#x5B58;&#x5728;&#xFF01;&apos;</span>)
+<span class="hljs-string">&apos;&apos;&apos;
+&#x4E0D;&#x5B58;&#x5728;&#xFF01;
+&#x4E0D;&#x5B58;&#x5728;&#xFF01;
+&apos;&apos;&apos;</span>
+</code></pre>
+<p>&#x2464; pop&#xFF1A;&#x5220;&#x9664;&#x952E;&#x503C;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x5220;&#x9664;&#x7684;&#x503C;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+info = {<span class="hljs-string">&apos;name&apos;</span>: <span class="hljs-string">&apos;thanlon&apos;</span>, <span class="hljs-string">&apos;age&apos;</span>: <span class="hljs-number">23</span>}
+result = info.pop(<span class="hljs-string">&apos;age&apos;</span>)
+print(info, result)
+<span class="hljs-string">&apos;&apos;&apos;
+{&apos;name&apos;: &apos;thanlon&apos;} 23
+&apos;&apos;&apos;</span>
+</code></pre>
+<p>&#x2465; update&#xFF1A;&#x4E0D;&#x5B58;&#x5728;&#x6DFB;&#x52A0;&#xFF0C;&#x5B58;&#x5728;&#x5C31;&#x66F4;&#x65B0;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+info = {<span class="hljs-string">&apos;name&apos;</span>: <span class="hljs-string">&apos;thanlon&apos;</span>, <span class="hljs-string">&apos;age&apos;</span>: <span class="hljs-number">23</span>}
+info.update({<span class="hljs-string">&apos;name&apos;</span>: <span class="hljs-string">&apos;kiku&apos;</span>, <span class="hljs-string">&apos;gender&apos;</span>: <span class="hljs-string">&apos;&#x7537;&apos;</span>})
+print(info)
+<span class="hljs-string">&apos;&apos;&apos;
+{&apos;name&apos;: &apos;kiku&apos;, &apos;age&apos;: 23, &apos;gender&apos;: &apos;&#x7537;&apos;}
+&apos;&apos;&apos;</span>
+</code></pre>
+<p>&#x2466; &#x77E5;&#x8BC6;&#x70B9;&#x8865;&#x5145;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+s = <span class="hljs-string">&apos;1,2&apos;</span>
+print(s.split(<span class="hljs-string">&apos;,&apos;</span>))  <span class="hljs-comment"># [&apos;1&apos;, &apos;2&apos;]</span>
+v1, v2 = s.split(<span class="hljs-string">&apos;,&apos;</span>)
+print(v1, v2)
+<span class="hljs-string">&apos;&apos;&apos;
+[&apos;1&apos;, &apos;2&apos;]
+1 2
+&apos;&apos;&apos;</span>
+</code></pre>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+v1, v2 = [<span class="hljs-string">&apos;1&apos;</span>, <span class="hljs-string">&apos;2&apos;</span>]
+print(v1, v2)
+<span class="hljs-string">&apos;&apos;&apos;
+1 2
+&apos;&apos;&apos;</span>
+</code></pre>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+v1, v2 = (<span class="hljs-string">&apos;1&apos;</span>, <span class="hljs-string">&apos;2&apos;</span>)
+print(v1, v2)
+<span class="hljs-string">&apos;&apos;&apos;
+1 2
+&apos;&apos;&apos;</span>
+</code></pre>
+<h6 id="65-&#x516C;&#x5171;&#x529F;&#x80FD;">6.5 &#x516C;&#x5171;&#x529F;&#x80FD;</h6>
+<p>&#x2460; len&#xFF1A;&#x83B7;&#x53D6;&#x5B57;&#x5178;&#x957F;&#x5EA6;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+<span class="hljs-string">&apos;&apos;&apos;
+len()
+&apos;&apos;&apos;</span>
+info = {<span class="hljs-string">&apos;name&apos;</span>: <span class="hljs-string">&apos;thanlon&apos;</span>, <span class="hljs-string">&apos;age&apos;</span>: <span class="hljs-number">23</span>, <span class="hljs-string">&apos;gender&apos;</span>: <span class="hljs-string">&apos;&#x7537;&apos;</span>}
+print(len(info))
+<span class="hljs-string">&apos;&apos;&apos;
+3
+&apos;&apos;&apos;</span>
+</code></pre>
+<p>&#x2461; &#x7D22;&#x5F15;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+<span class="hljs-string">&apos;&apos;&apos;
+len()
+&apos;&apos;&apos;</span>
+info = {<span class="hljs-string">&apos;name&apos;</span>: <span class="hljs-string">&apos;thanlon&apos;</span>, <span class="hljs-string">&apos;age&apos;</span>: <span class="hljs-number">23</span>, <span class="hljs-string">&apos;gender&apos;</span>: <span class="hljs-string">&apos;&#x7537;&apos;</span>}
+print(info[<span class="hljs-string">&apos;name&apos;</span>])
+<span class="hljs-string">&apos;&apos;&apos;
+thanlon
+&apos;&apos;&apos;</span>
+</code></pre>
+<p>&#x2462; &#x5207;&#x7247;&#x3010;&#x65E0;&#x3011;
+&#x2463; &#x6B65;&#x957F;&#x3010;&#x65E0;&#x3011;
+&#x2464; for&#x5FAA;&#x73AF;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+<span class="hljs-string">&apos;&apos;&apos;
+values()
+&apos;&apos;&apos;</span>
+info = {<span class="hljs-string">&apos;name&apos;</span>: <span class="hljs-string">&apos;thanlon&apos;</span>, <span class="hljs-string">&apos;age&apos;</span>: <span class="hljs-number">23</span>, <span class="hljs-string">&apos;gender&apos;</span>: <span class="hljs-string">&apos;&#x7537;&apos;</span>}
+<span class="hljs-keyword">for</span> key, value <span class="hljs-keyword">in</span> info.items():
+    print(key, value)
+<span class="hljs-string">&apos;&apos;&apos;
+name thanlon
+age 23
+gender &#x7537;
+&apos;&apos;&apos;</span>
+</code></pre>
+<p>&#x2465; &#x4FEE;&#x6539;&#xFF1A;&#x5B58;&#x5728;&#x5C31;&#x4FEE;&#x6539;&#xFF0C;&#x4E0D;&#x5B58;&#x5728;&#x5C31;&#x6DFB;&#x52A0;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+<span class="hljs-string">&apos;&apos;&apos;
+&#x4FEE;&#x6539;
+&apos;&apos;&apos;</span>
+info = {<span class="hljs-string">&apos;name&apos;</span>: <span class="hljs-string">&apos;thanlon&apos;</span>, <span class="hljs-string">&apos;age&apos;</span>: <span class="hljs-number">23</span>, <span class="hljs-string">&apos;gender&apos;</span>: <span class="hljs-string">&apos;&#x7537;&apos;</span>}
+info[<span class="hljs-string">&apos;name&apos;</span>] = <span class="hljs-string">&apos;Kiku&apos;</span>
+info[<span class="hljs-string">&apos;age&apos;</span>] = <span class="hljs-number">25</span>
+info[<span class="hljs-string">&apos;gender&apos;</span>] = <span class="hljs-string">&apos;&#x5973;&apos;</span>
+print(info)
+<span class="hljs-string">&apos;&apos;&apos;
+{&apos;name&apos;: &apos;Kiku&apos;, &apos;age&apos;: 25, &apos;gender&apos;: &apos;&#x5973;&apos;}
+&apos;&apos;&apos;</span>
+</code></pre>
+<p>&#x5982;&#x679C;&#x9700;&#x8981;&#x4FEE;&#x6539;&#x952E;&#xFF0C;&#x53EF;&#x4EE5;&#x5148;&#x5220;&#x6389;&#x539F;&#x6765;&#x7684;&#x952E;&#xFF0C;&#x518D;&#x589E;&#x52A0;&#x65B0;&#x7684;&#x952E;&#xFF0C;&#x4E00;&#x822C;&#x662F;&#x4E0D;&#x6539;&#x952E;&#x7684;&#x3002;</p>
+<p>&#x2466; &#x5220;&#x9664;&#xFF1A;&#x5220;&#x9664;&#x952E;&#x503C;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+<span class="hljs-string">&apos;&apos;&apos;
+&#x5220;&#x9664;
+&apos;&apos;&apos;</span>
+info = {<span class="hljs-string">&apos;name&apos;</span>: <span class="hljs-string">&apos;thanlon&apos;</span>, <span class="hljs-string">&apos;age&apos;</span>: <span class="hljs-number">23</span>, <span class="hljs-string">&apos;gender&apos;</span>: <span class="hljs-string">&apos;&#x7537;&apos;</span>}
+<span class="hljs-keyword">del</span> info[<span class="hljs-string">&apos;name&apos;</span>]
+print(info)
+<span class="hljs-string">&apos;&apos;&apos;
+{&apos;age&apos;: 23, &apos;gender&apos;: &apos;&#x7537;&apos;}
+&apos;&apos;&apos;</span>
+</code></pre>
+<h6 id="66-&#x5B57;&#x5178;&#x7EC3;&#x4E60;">6.6 &#x5B57;&#x5178;&#x7EC3;&#x4E60;</h6>
+<p>&#x2460; &#x7528;&#x6237;&#x8F93;&#x5165;&#x952E;&#xFF0C;&#x7CFB;&#x7EDF;&#x6839;&#x636E;&#x8F93;&#x5165;&#x7684;&#x952E;&#x8F93;&#x51FA;&#x5BF9;&#x5E94;&#x7684;&#x503C;?</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+<span class="hljs-string">&apos;&apos;&apos;
+&#x7528;&#x6237;&#x8F93;&#x5165;&#x952E;&#xFF0C;&#x7CFB;&#x7EDF;&#x6839;&#x636E;&#x8F93;&#x5165;&#x7684;&#x952E;&#x8F93;&#x51FA;&#x5BF9;&#x5E94;&#x7684;&#x503C;
+&apos;&apos;&apos;</span>
+info = {<span class="hljs-string">&apos;name&apos;</span>: <span class="hljs-string">&apos;thanlon&apos;</span>, <span class="hljs-string">&apos;age&apos;</span>: <span class="hljs-number">23</span>, <span class="hljs-string">&apos;gender&apos;</span>: <span class="hljs-string">&apos;&#x7537;&apos;</span>}
+<span class="hljs-keyword">for</span> k, v <span class="hljs-keyword">in</span> info.items():
+    print(k, v)
+<span class="hljs-keyword">while</span> <span class="hljs-keyword">True</span>:
+    key = input(<span class="hljs-string">&apos;&#x8BF7;&#x8F93;&#x5165;key&#xFF1A;&apos;</span>)
+    print(info[key])
+<span class="hljs-string">&apos;&apos;&apos;
+name thanlon
+age 23
+gender &#x7537;
+&#x8BF7;&#x8F93;&#x5165;key&#xFF1A;name
+thanlon
+&#x8BF7;&#x8F93;&#x5165;key&#xFF1A;age
+23
+&apos;&apos;&apos;</span>
+</code></pre>
+<p>&#x2461; &#x7ED9;&#x4E00;&#x4E2A;&#x7A7A;&#x5B57;&#x5178;&#xFF0C;&#x5728;&#x7A7A;&#x5B57;&#x5178;&#x4E2D;&#x6DFB;&#x52A0;&#x6570;&#x636E;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+<span class="hljs-string">&apos;&apos;&apos;
+&#x7ED9;&#x4E00;&#x4E2A;&#x7A7A;&#x5B57;&#x5178;&#xFF0C;&#x5728;&#x7A7A;&#x5B57;&#x5178;&#x4E2D;&#x6DFB;&#x52A0;&#x6570;&#x636E;
+&apos;&apos;&apos;</span>
+info = {}
+info[<span class="hljs-string">&apos;name&apos;</span>] = <span class="hljs-string">&apos;thanon&apos;</span>
+info[<span class="hljs-string">&apos;age&apos;</span>] = <span class="hljs-number">23</span>
+info[<span class="hljs-string">&apos;gender&apos;</span>] = <span class="hljs-string">&apos;&#x7537;&apos;</span>
+print(info)
+<span class="hljs-string">&apos;&apos;&apos;
+{&apos;name&apos;: &apos;thanon&apos;, &apos;age&apos;: 23, &apos;gender&apos;: &apos;&#x7537;&apos;}
+&apos;&apos;&apos;</span>
+</code></pre>
+<p>&#x2462; &#x7ED9;&#x4E00;&#x4E2A;&#x7A7A;&#x5B57;&#x5178;&#xFF0C;&#x8F93;&#x5165;key&#x548C;value&#xFF0C;&#x5C06;&#x8F93;&#x5165;&#x7684;key&#x548C;value&#x6DFB;&#x52A0;&#x5230;&#x5B57;&#x5178;&#x4E2D;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+<span class="hljs-string">&apos;&apos;&apos;
+# coding:utf-8
+&apos;&apos;&apos;</span>
+&#x7ED9;&#x4E00;&#x4E2A;&#x7A7A;&#x5B57;&#x5178;&#xFF0C;&#x8F93;&#x5165;key&#x548C;value&#xFF0C;&#x5C06;&#x8F93;&#x5165;&#x7684;key&#x548C;value&#x6DFB;&#x52A0;&#x5230;&#x5B57;&#x5178;&#x4E2D;
+<span class="hljs-string">&apos;&apos;&apos;
+info = {}
+k = input(&apos;Place input key&#xFF1A;&apos;)
+v = input(&apos;Place input value&#xFF1A;&apos;)
+info[k] = v
+print(info)
+&apos;&apos;&apos;</span>
+Place input key&#xFF1A;name
+Place input value&#xFF1A;thanlon
+{<span class="hljs-string">&apos;name&apos;</span>: <span class="hljs-string">&apos;thanlon&apos;</span>}
+<span class="hljs-string">&apos;&apos;&apos;
+</span></code></pre>
+<p>&#x2463; &#x7ED9;&#x4E00;&#x4E2A;&#x7A7A;&#x5B57;&#x5178;&#xFF0C;&#x8BA9;&#x7528;&#x6237;&#x4E00;&#x76F4;&#x8F93;&#x5165;key&#x548C;value&#xFF0C;&#x5C06;&#x8F93;&#x5165;&#x7684;key&#x548C;value&#x6DFB;&#x52A0;&#x5230;&#x5B57;&#x5178;&#x4E2D;&#xFF0C;&#x76F4;&#x5230;&#x7528;&#x6237;&#x8F93;&#x5165;N&#xFF0C;&#x5219;&#x8868;&#x793A;&#x4E0D;&#x518D;&#x8F93;&#x5165;&#x3002;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+<span class="hljs-string">&apos;&apos;&apos;
+&#x7ED9;&#x4E00;&#x4E2A;&#x7A7A;&#x5B57;&#x5178;&#xFF0C;&#x8BA9;&#x7528;&#x6237;&#x4E00;&#x76F4;&#x8F93;&#x5165;key&#x548C;value&#xFF0C;&#x5C06;&#x8F93;&#x5165;&#x7684;key&#x548C;value&#x6DFB;&#x52A0;&#x5230;&#x5B57;&#x5178;&#x4E2D;&#xFF0C;&#x76F4;&#x5230;&#x7528;&#x6237;&#x8F93;&#x5165;N&#xFF0C;&#x5219;&#x8868;&#x793A;&#x4E0D;&#x518D;&#x8F93;&#x5165;&#x3002;
+&apos;&apos;&apos;</span>
+info = {}
+<span class="hljs-keyword">while</span> <span class="hljs-keyword">True</span>:
+    k = input(<span class="hljs-string">&apos;Please input key&#xFF1A;&apos;</span>)
+    <span class="hljs-keyword">if</span> k == <span class="hljs-string">&apos;N&apos;</span>:
+        <span class="hljs-keyword">break</span>
+    v = input(<span class="hljs-string">&apos;Please input Value&#xFF1A;&apos;</span>)
+    info[k] = v
+print(info)
+<span class="hljs-string">&apos;&apos;&apos;
+Please input key&#xFF1A;name
+Please input Value&#xFF1A;thanlon
+Please input key&#xFF1A;age
+Please input Value&#xFF1A;23
+Please input key&#xFF1A;N
+{&apos;name&apos;: &apos;thanlon&apos;, &apos;age&apos;: &apos;23&apos;}
+&apos;&apos;&apos;</span>
+</code></pre>
+<p>&#x2464; &#x4F7F;&#x7528;&#x4EE3;&#x7801;&#x5B9E;&#x73B0;&#xFF1A;&#x5C06;&#x5B57;&#x7B26;&#x4E32;&apos;k1|v1,k2|v2,k3|v3,&#x2026;&apos;&#x8F6C;&#x6362;&#x4E3A;&#x5B57;&#x5178;{&apos;k1&apos;:&apos;v1&apos;,&apos;k2&apos;:&apos;v2&apos;,&#x2026;&#x2026;}</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+<span class="hljs-string">&apos;&apos;&apos;
+&#x4F7F;&#x7528;&#x4EE3;&#x7801;&#x5B9E;&#x73B0;&#xFF1A;
+&#x5C06;&#x8FD9;&#x6837;&#x7684;&#x5B57;&#x7B26;&#x4E32;&apos;k1|v1,k2|v2,k3|v3,&#x2026;&apos;&#x8F6C;&#x6362;&#x4E3A;&#x8FD9;&#x6837;&#x7684;&#x5B57;&#x5178;{&apos;k1&apos;:&apos;v1&apos;,&apos;k2&apos;:&apos;v2&apos;,&#x2026;&#x2026;}
+&apos;&apos;&apos;</span>
+msg = <span class="hljs-string">&apos;k1|v1,k2|v2,k3|v3&apos;</span>
+info = {}
+<span class="hljs-keyword">for</span> item <span class="hljs-keyword">in</span> msg.split(<span class="hljs-string">&apos;,&apos;</span>):
+    k, v = item.split(<span class="hljs-string">&apos;|&apos;</span>)
+    info[k] = v
+print(info)
+<span class="hljs-string">&apos;&apos;&apos;
+{&apos;k1&apos;: &apos;v1&apos;, &apos;k2&apos;: &apos;v2&apos;, &apos;k3&apos;: &apos;v3&apos;}
+&apos;&apos;&apos;</span>
+</code></pre>
+<p>&#x2465; &#x6570;&#x636E;&#x7C7B;&#x578B;&#x7684;&#x5D4C;&#x5957;
+&#x5143;&#x7EC4;&#x3001;&#x5217;&#x8868;&#x3001;&#x5B57;&#x5178;&#x53EF;&#x4EE5;&#x76F8;&#x4E92;&#x5D4C;&#x5957;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+<span class="hljs-string">&apos;&apos;&apos;
+&#x4ECE;[1, 2, {&apos;k1&apos;: 1, &apos;k2&apos;: 2, &apos;k3&apos;: (1, 2, 3), &apos;k4&apos;: [1, (4, 5, 6), 2]}, 3]&#x4E2D;&#x53D6;&#x503C;&#xFF0C;&#x53D6;&#x51FA;k4&#x4E2D;&#x7684;6
+&apos;&apos;&apos;</span>
+
+data = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, {<span class="hljs-string">&apos;k1&apos;</span>: <span class="hljs-number">1</span>, <span class="hljs-string">&apos;k2&apos;</span>: <span class="hljs-number">2</span>, <span class="hljs-string">&apos;k3&apos;</span>: (<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>), <span class="hljs-string">&apos;k4&apos;</span>: [<span class="hljs-number">1</span>, (<span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>), <span class="hljs-number">2</span>]}, <span class="hljs-number">3</span>]
+print(data[<span class="hljs-number">2</span>][<span class="hljs-string">&apos;k4&apos;</span>][<span class="hljs-number">1</span>][<span class="hljs-number">2</span>])
+<span class="hljs-string">&apos;&apos;&apos;
+6
+&apos;&apos;&apos;</span>
+</code></pre>
+<p>&#x2466; &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7528;&#x6237;&#x5217;&#x8868;&#xFF0C;&#x7136;&#x540E;&#x8BA9;&#x7528;&#x6237;&#x8F93;&#x5165;&#x7528;&#x6237;&#x540D;&#x548C;&#x5BC6;&#x7801;&#x8FDB;&#x884C;&#x767B;&#x5F55;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+<span class="hljs-string">&apos;&apos;&apos;
+&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7528;&#x6237;&#x5217;&#x8868;&#xFF0C;&#x7136;&#x540E;&#x8BA9;&#x7528;&#x6237;&#x8F93;&#x5165;&#x7528;&#x6237;&#x540D;&#x548C;&#x5BC6;&#x7801;&#x8FDB;&#x884C;&#x767B;&#x5F55;
+&apos;&apos;&apos;</span>
+<span class="hljs-comment"># &#x6784;&#x5EFA;&#x7528;&#x6237;&#x5217;&#x8868;</span>
+user_list = []
+<span class="hljs-keyword">while</span> <span class="hljs-keyword">True</span>:
+    user = input(<span class="hljs-string">&apos;&#x8BF7;&#x8F93;&#x5165;&#x7528;&#x6237;&#x540D;&#xFF1A;&apos;</span>)
+    <span class="hljs-keyword">if</span> user == <span class="hljs-string">&apos;N&apos;</span>:
+        <span class="hljs-keyword">break</span>
+    pwd = input(<span class="hljs-string">&apos;&#x8BF7;&#x8F93;&#x5165;&#x5BC6;&#x7801;&#xFF1A;&apos;</span>)
+    <span class="hljs-string">&apos;&apos;&apos;
+    &#x6784;&#x5EFA;&#x5217;&#x8868;&#x65B9;&#x5F0F;1
+    &apos;&apos;&apos;</span>
+    <span class="hljs-comment"># user_info = {}</span>
+    <span class="hljs-comment"># user_info[&apos;user&apos;] = user</span>
+    <span class="hljs-comment"># user_info[&apos;pwd&apos;] = pwd</span>
+    <span class="hljs-comment"># # print(user_info)  # {&apos;user&apos;: &apos;thanlon&apos;, &apos;pwd&apos;: &apos;123&apos;}</span>
+    <span class="hljs-comment"># user_list.append(user_info)</span>
+    <span class="hljs-string">&apos;&apos;&apos;
+      &#x6784;&#x5EFA;&#x5217;&#x8868;&#x65B9;&#x5F0F;2
+    &apos;&apos;&apos;</span>
+    user_info = {<span class="hljs-string">&apos;user&apos;</span>: user, <span class="hljs-string">&apos;pwd&apos;</span>: pwd}
+    user_list.append(user_info)
+username = input(<span class="hljs-string">&apos;&#x8BF7;&#x8F93;&#x5165;&#x7528;&#x6237;&#x540D;&#xFF1A;&apos;</span>)
+pwd = input(<span class="hljs-string">&apos;&#x8BF7;&#x8F93;&#x5165;&#x5BC6;&#x7801;&#xFF1A;&apos;</span>)
+msg = <span class="hljs-string">&apos;&#x767B;&#x5F55;&#x5931;&#x8D25;&#xFF01;&apos;</span>
+<span class="hljs-keyword">for</span> item <span class="hljs-keyword">in</span> user_list:
+    <span class="hljs-keyword">if</span> username == item[<span class="hljs-string">&apos;user&apos;</span>] <span class="hljs-keyword">and</span> pwd == item[<span class="hljs-string">&apos;pwd&apos;</span>]:
+        print(<span class="hljs-string">&apos;&#x767B;&#x5F55;&#x6210;&#x529F;&#xFF01;&apos;</span>)
+        <span class="hljs-keyword">break</span>
+print(msg)
+</code></pre>
+<p>&#x2466; &#x5224;&#x65AD;&#x952E;&#x3001;&#x503C;&#x3001;&#x952E;&#x503C;&#x662F;&#x5426;&#x5728;&#x5B57;&#x5178;&#x4E2D;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+
+<span class="hljs-string">&apos;&apos;&apos;
+
+&apos;&apos;&apos;</span>
+v = {<span class="hljs-string">&apos;k1&apos;</span>: <span class="hljs-string">&apos;v1&apos;</span>, <span class="hljs-string">&apos;k2&apos;</span>: <span class="hljs-string">&apos;v2&apos;</span>, <span class="hljs-string">&apos;k3&apos;</span>: <span class="hljs-string">&apos;v3&apos;</span>}
+<span class="hljs-keyword">if</span> <span class="hljs-string">&apos;x&apos;</span> <span class="hljs-keyword">in</span> v:  <span class="hljs-comment"># &#x9ED8;&#x8BA4;&#x6309;&#x7167;&#x952E;&#x6765;&#x5224;&#x65AD;&#xFF1A;&#x5224;&#x65AD;x&#x662F;&#x5426;&#x662F;&#x5B57;&#x5178;&#x7684;&#x952E;</span>
+    <span class="hljs-keyword">pass</span>
+
+<span class="hljs-comment"># &#x8BF7;&#x5224;&#x65AD;&#xFF1A;k1&#x662F;&#x5426;&#x662F;&#x5B57;&#x5178;&#x4E2D;&#x7684;&#x952E;</span>
+<span class="hljs-keyword">if</span> <span class="hljs-string">&apos;k1&apos;</span> <span class="hljs-keyword">in</span> v:
+    <span class="hljs-keyword">pass</span>
+
+<span class="hljs-string">&apos;&apos;&apos;
+&#x8BF7;&#x5224;&#x65AD;&#xFF1A;v1&#x662F;&#x5426;&#x662F;&#x5B57;&#x5178;&#x4E2D;&#x7684;&#x503C;
+&#x65B9;&#x5F0F;1&#xFF1A;&#x5FAA;&#x73AF;&#x5224;&#x65AD;
+&apos;&apos;&apos;</span>
+<span class="hljs-comment"># flag = &apos;&#x4E0D;&#x5B58;&#x5728;&apos;</span>
+<span class="hljs-comment"># for v in v.values():</span>
+<span class="hljs-comment">#     if v == &apos;v1&apos;:</span>
+<span class="hljs-comment">#         flag = &apos;&#x5B58;&#x5728;&#xFF01;&apos;</span>
+<span class="hljs-comment"># print(flag)</span>
+<span class="hljs-string">&apos;&apos;&apos;
+&#x8BF7;&#x5224;&#x65AD;&#xFF1A;v1&#x662F;&#x5426;&#x662F;&#x5B57;&#x5178;&#x4E2D;&#x7684;&#x503C;
+&#x65B9;&#x5F0F;1&#xFF1A;&#x5F3A;&#x5236;&#x8F6C;&#x6362;&#x6210;&#x5217;&#x8868;
+&apos;&apos;&apos;</span>
+<span class="hljs-keyword">if</span> <span class="hljs-string">&apos;v1&apos;</span> <span class="hljs-keyword">in</span> list(v.values()):  <span class="hljs-comment"># &#x8FC1;&#x81F3;&#x8F6C;&#x6362;&#x6210;&#x5217;&#x8868;&#xFF1A;[&apos;v1&apos;, &apos;v2&apos;, &apos;v3&apos;]</span>
+    <span class="hljs-keyword">pass</span>
+
+<span class="hljs-string">&apos;&apos;&apos;
+&#x5224;&#x65AD;&apos;k1&apos;:&apos;v1&apos;&#x662F;&#x5426;&#x5728;&#x5B57;&#x5178;&#x4E2D;
+&apos;&apos;&apos;</span>
+value = v.get(<span class="hljs-string">&apos;k1&apos;</span>)
+<span class="hljs-keyword">if</span> value == <span class="hljs-string">&apos;v1&apos;</span>:
+    print(<span class="hljs-string">&apos;&#x5B58;&#x5728;&apos;</span>)
+<span class="hljs-keyword">else</span>:
+    print(<span class="hljs-string">&apos;&#x4E0D;&#x5B58;&#x5728;&apos;</span>)
+</code></pre>
+<p>&#x2468; &#x8BA9;&#x7528;&#x6237;&#x8F93;&#x5165;&#x4EFB;&#x610F;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5224;&#x65AD;&#x6B64;&#x5B57;&#x7B26;&#x4E32;&#x662F;&#x5426;&#x5305;&#x542B;&#x6307;&#x5B9A;&#x7684;&#x654F;&#x611F;&#x5B57;&#x7B26;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+<span class="hljs-string">&apos;&apos;&apos;
+&#x8BA9;&#x7528;&#x6237;&#x8F93;&#x5165;&#x4EFB;&#x610F;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5224;&#x65AD;&#x6B64;&#x5B57;&#x7B26;&#x4E32;&#x662F;&#x5426;&#x5305;&#x542B;&#x6307;&#x5B9A;&#x7684;&#x654F;&#x611F;&#x5B57;&#x7B26;
+&apos;&apos;&apos;</span>
+char_list = [<span class="hljs-string">&apos;thanlon&apos;</span>, <span class="hljs-string">&apos;kiku&apos;</span>, <span class="hljs-string">&apos;haha&apos;</span>]
+content = input(<span class="hljs-string">&apos;&#x8BF7;&#x8F93;&#x5165;&#x5185;&#x5BB9;&#xFF1A;&apos;</span>)
+success = <span class="hljs-keyword">True</span>
+<span class="hljs-keyword">for</span> v <span class="hljs-keyword">in</span> char_list:
+    <span class="hljs-keyword">if</span> v <span class="hljs-keyword">in</span> content:
+        success = <span class="hljs-keyword">False</span>
+        <span class="hljs-keyword">break</span>
+<span class="hljs-keyword">if</span> success:
+    print(content)
+<span class="hljs-keyword">else</span>:
+    print(<span class="hljs-string">&apos;&#x5305;&#x542B;&#x654F;&#x611F;&#x5B57;&#x7B26;&#xFF01;&apos;</span>)
+<span class="hljs-string">&apos;&apos;&apos;
+&#x8BF7;&#x8F93;&#x5165;&#x5185;&#x5BB9;&#xFF1A;thanlonthanlon
+&#x5305;&#x542B;&#x654F;&#x611F;&#x5B57;&#x7B26;&#xFF01;
+&apos;&apos;&apos;</span>
+</code></pre>
+<h5 id="7-none">7. None</h5>
+<p>None&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF0C;&#x8BE5;&#x7C7B;&#x578B;&#x8868;&#x793A;&#x7A7A;&#xFF0C;&#x65E0;&#x4EFB;&#x4F55;&#x529F;&#x80FD;&#xFF0C;&#x4E13;&#x7528;&#x4E8E;&#x63D0;&#x4F9B;&#x7A7A;&#x503C;&#x3002;&#x6BD4;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;&#x3001;&#x7A7A;&#x5217;&#x8868;&#x7B49;&#x66F4;&#x8282;&#x7701;&#x5185;&#x5B58;&#x3002;</p>
+<h5 id="8-&#x96C6;&#x5408;">8. &#x96C6;&#x5408;</h5>
+<h6 id="81-&#x96C6;&#x5408;&#x6982;&#x8FF0;">8.1 &#x96C6;&#x5408;&#x6982;&#x8FF0;</h6>
+<p>&#x96C6;&#x5408;&#x662F;&#x65E0;&#x5E8F;&#x7684;&#x4E14;&#x4E0D;&#x91CD;&#x590D;&#x7684;&#x3002;</p>
+<h6 id="82-&#x7A7A;&#x96C6;&#x5408;&#x4E0E;&#x5176;&#x5B83;&#x7A7A;&#x6570;&#x636E;&#x7C7B;&#x578B;">8.2 &#x7A7A;&#x96C6;&#x5408;&#x4E0E;&#x5176;&#x5B83;&#x7A7A;&#x6570;&#x636E;&#x7C7B;&#x578B;</h6>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+<span class="hljs-keyword">None</span>
+<span class="hljs-comment"># int</span>
+v1 = <span class="hljs-number">123</span>
+v1 = int()  <span class="hljs-comment"># 0</span>
+<span class="hljs-comment"># bool</span>
+v2 = <span class="hljs-keyword">True</span>  <span class="hljs-comment"># v3 = False</span>
+v2 = bool()  <span class="hljs-comment"># False</span>
+<span class="hljs-comment"># str</span>
+v3 = <span class="hljs-string">&apos;&apos;</span>
+v3 = str()
+<span class="hljs-comment"># list</span>
+v4 = []
+v4 = list()
+<span class="hljs-comment"># tuple</span>
+v5 = ()
+v5 = tuple()
+<span class="hljs-comment"># dict</span>
+v6 = {}
+v6 = dict()
+<span class="hljs-comment"># set</span>
+v7 = set()
+</code></pre>
+<h6 id="83-&#x72EC;&#x6709;&#x529F;&#x80FD;">8.3 &#x72EC;&#x6709;&#x529F;&#x80FD;</h6>
+<p>&#x2460; add&#xFF1A;&#x6DFB;&#x52A0;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+<span class="hljs-string">&apos;&apos;&apos;
+add&#x65B9;&#x6CD5;
+&apos;&apos;&apos;</span>
+v = {<span class="hljs-number">1</span>, <span class="hljs-number">2</span>}
+v.add(<span class="hljs-string">&apos;thanlon&apos;</span>)
+v.add(<span class="hljs-string">&apos;thanlon&apos;</span>)  <span class="hljs-comment"># &#x4E0D;&#x91CD;&#x590D;&#xFF0C;&#x6240;&#x4EE5;&#x4E0D;&#x88AB;&#x6DFB;&#x52A0;</span>
+print(v)
+<span class="hljs-string">&apos;&apos;&apos;
+{1, 2, &apos;thanlon&apos;}
+&apos;&apos;&apos;</span>
+</code></pre>
+<p>&#x2461; discard</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+<span class="hljs-string">&apos;&apos;&apos;
+discard&#x65B9;&#x6CD5;
+&apos;&apos;&apos;</span>
+v = {<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-string">&apos;thanlon&apos;</span>}
+v.discard(<span class="hljs-string">&apos;thanlon&apos;</span>)
+print(v)
+<span class="hljs-string">&apos;&apos;&apos;
+{1, 2}
+&apos;&apos;&apos;</span>
+</code></pre>
+<p>&#x2462; update</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+<span class="hljs-string">&apos;&apos;&apos;
+update&#x65B9;&#x6CD5;
+&apos;&apos;&apos;</span>
+v = {<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-string">&apos;thanlon&apos;</span>}
+v.update({<span class="hljs-string">&apos;kiku&apos;</span>})
+v.update([<span class="hljs-string">&apos;haha&apos;</span>])
+print(v)
+<span class="hljs-string">&apos;&apos;&apos;
+{1, 2, &apos;thanlon&apos;, &apos;haha&apos;, &apos;kiku&apos;}
+&apos;&apos;&apos;</span>
+</code></pre>
+<p>&#x2463; intersection&#xFF1A;&#x4EA4;&#x96C6;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+<span class="hljs-string">&apos;&apos;&apos;
+intersection&#x65B9;&#x6CD5;:&#x4EA7;&#x751F;&#x4EA4;&#x96C6;
+&apos;&apos;&apos;</span>
+v = {<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-string">&apos;thanlon&apos;</span>}
+result = v.intersection({<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-string">&apos;kiku&apos;</span>})
+result2 = v.intersection([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-string">&apos;kiku&apos;</span>])
+print(result)
+print(result2)
+<span class="hljs-string">&apos;&apos;&apos;
+{1, 2}
+{1, 2}
+&apos;&apos;&apos;</span>
+</code></pre>
+<p>&#x2464; union&#xFF1A;&#x5E76;&#x96C6;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+<span class="hljs-string">&apos;&apos;&apos;
+union:&#x5E76;&#x96C6;
+&apos;&apos;&apos;</span>
+v = {<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-string">&apos;thanlon&apos;</span>}
+result = v.union({<span class="hljs-number">1</span>, <span class="hljs-string">&apos;kiku&apos;</span>})
+result2 = v.union([<span class="hljs-number">1</span>, <span class="hljs-string">&apos;kiku&apos;</span>])
+print(result)
+print(result2)
+<span class="hljs-string">&apos;&apos;&apos;
+{1, 2, &apos;thanlon&apos;, &apos;kiku&apos;}
+{1, 2, &apos;thanlon&apos;, &apos;kiku&apos;}
+&apos;&apos;&apos;</span>
+</code></pre>
+<p>&#x2465; difference&#xFF1A;&#x5DEE;&#x96C6;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+<span class="hljs-string">&apos;&apos;&apos;
+difference:&#x4EA7;&#x751F;&#x5DEE;&#x96C6;
+&apos;&apos;&apos;</span>
+v = {<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-string">&apos;thanlon&apos;</span>}
+result = v.difference({<span class="hljs-number">1</span>, <span class="hljs-number">2</span>})
+result2 = v.difference([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>])
+print(result)
+print(result2)
+<span class="hljs-string">&apos;&apos;&apos;
+{&apos;thanlon&apos;}
+{&apos;thanlon&apos;}
+&apos;&apos;&apos;</span>
+</code></pre>
+<p>&#x2466; symmetric_difference&#xFF1A;&#x5BF9;&#x79F0;&#x5DEE;&#x96C6;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+<span class="hljs-string">&apos;&apos;&apos;
+difference:&#x5BF9;&#x79F0;&#x5DEE;&#x96C6;
+&apos;&apos;&apos;</span>
+v = {<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-string">&apos;thanlon&apos;</span>}
+result = v.symmetric_difference({<span class="hljs-number">1</span>, <span class="hljs-string">&apos;kiku&apos;</span>})
+result2 = v.symmetric_difference([<span class="hljs-number">1</span>, <span class="hljs-string">&apos;kiku&apos;</span>])
+print(result)
+print(result2)
+<span class="hljs-string">&apos;&apos;&apos;
+{2, &apos;kiku&apos;, &apos;thanlon&apos;}
+{2, &apos;kiku&apos;, &apos;thanlon&apos;}
+&apos;&apos;&apos;</span>
+</code></pre>
+<h6 id="84-&#x516C;&#x5171;&#x529F;&#x80FD;">8.4 &#x516C;&#x5171;&#x529F;&#x80FD;</h6>
+<p>&#x2460; len&#xFF1A;&#x83B7;&#x53D6;&#x96C6;&#x5408;&#x5143;&#x7D20;&#x7684;&#x957F;&#x5EA6;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+v = {<span class="hljs-string">&apos;thanlon&apos;</span>, <span class="hljs-string">&apos;kiku&apos;</span>}
+print(len(v))
+<span class="hljs-string">&apos;&apos;&apos;
+2
+&apos;&apos;&apos;</span>
+</code></pre>
+<p>&#x2461; for&#x5FAA;&#x73AF;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+v = {<span class="hljs-string">&apos;thanlon&apos;</span>, <span class="hljs-string">&apos;kiku&apos;</span>}
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> v:
+    print(i)
+<span class="hljs-string">&apos;&apos;&apos;
+kiku
+thanlon
+&apos;&apos;&apos;</span>
+</code></pre>
+<p>&#x2462; &#x7D22;&#x5F15;&#x3010;&#x65E0;&#x3011;
+&#x2463; &#x6B65;&#x957F;&#x3010;&#x65E0;&#x3011;
+&#x2464; &#x5207;&#x7247;&#x3010;&#x65E0;&#x3011;
+&#x2465; &#x5220;&#x9664;&#x3010;&#x65E0;&#x3011;
+&#x2466; &#x4FEE;&#x6539;&#x3010;&#x65E0;&#x3011;</p>
+<h6 id="85-&#x96C6;&#x5408;&#x7684;&#x5D4C;&#x5957;">8.5 &#x96C6;&#x5408;&#x7684;&#x5D4C;&#x5957;</h6>
+<p>&#x53EF;&#x53D8;&#x7C7B;&#x578B;&#x4E0D;&#x53EF;&#x4EE5;&#x653E;&#x5728;&#x96C6;&#x5408;&#x4E2D;&#xFF0C;&#x5217;&#x8868;&#x3001;&#x5B57;&#x5178;&#x3001;&#x96C6;&#x5408;&#x5747;&#x4E0D;&#x80FD;&#x653E;&#x5728;&#x96C6;&#x5408;&#x4E2D;&#xFF0C;&#x8FD9;&#x4E09;&#x79CD;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x662F;&#x4E0D;&#x53EF;hash&#x7684;&#xFF0C;&#x5E76;&#x4E14;&#x4E0D;&#x80FD;&#x4F5C;&#x4E3A;&#x5B57;&#x5178;&#x7684;key&#x3002;</p>
+<pre><code class="lang-python">info = {<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-keyword">True</span>,<span class="hljs-string">&apos;thanlon&apos;</span>,<span class="hljs-keyword">None</span>,(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>)}
+</code></pre>
+<p>&#x5728;&#x5217;&#x8868;&#x67E5;&#x627E;&#x5143;&#x7D20;&#x6BD4;&#x8F83;&#x6162;&#xFF0C;&#x5728;&#x96C6;&#x5408;&#x548C;&#x5B57;&#x5178;&#x4E2D;&#x67E5;&#x627E;&#x5143;&#x7D20;&#x6BD4;&#x8F83;&#x5FEB;&#x3002;&#x5B57;&#x5178;&#x4E2D;&#x4F1A;&#x628A;key&#x8FDB;&#x884C;hash&#x8F6C;&#x6362;&#xFF0C;&#x67E5;&#x627E;&#x5143;&#x7D20;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x76F4;&#x63A5;&#x6839;&#x636E;k1&#xFF0C;&#x627E;&#x5230;v1&#x3002;&#x800C;&#x4E0D;&#x662F;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x53BB;&#x627E;&#x3002;&#x96C6;&#x5408;&#x548C;&#x5B57;&#x5178;&#x8981;&#x6BD4;&#x5217;&#x8868;&#x3001;&#x5143;&#x7EC4;&#x67E5;&#x627E;&#x901F;&#x5EA6;&#x5FEB;&#x5F97;&#x591A;&#x3002;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+v = {
+    <span class="hljs-number">1</span>: <span class="hljs-string">&apos;thanlon&apos;</span>,
+    <span class="hljs-keyword">True</span>: <span class="hljs-string">&apos;kiku&apos;</span>  <span class="hljs-comment"># True&#x8FD8;&#x662F;1&#xFF0C;&#x503C;&#x53D1;&#x751F;&#x6539;&#x53D8;</span>
+}
+print(v)
+<span class="hljs-string">&apos;&apos;&apos;
+{1: &apos;kiku&apos;}
+&apos;&apos;&apos;</span>
+</code></pre>
+<h5 id="9-&#x6709;&#x65E0;&#x5E8F;&#x6027;">9. &#x6709;&#x65E0;&#x5E8F;&#x6027;</h5>
+<p>&#x5143;&#x7EC4;&#x548C;&#x5217;&#x8868;&#x662F;&#x6709;&#x5E8F;&#x7684;&#xFF0C;&#x96C6;&#x5408;&#x548C;&#x5B57;&#x5178;&#x662F;&#x65E0;&#x5E8F;&#x7684;&#xFF0C;&#x4F46;&#x662F;Python3.6&#x4E4B;&#x540E;&#x5B57;&#x5178;&#x662F;&#x6709;&#x5E8F;&#x7684;&#x3002;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x8BF4;&#xFF0C;&#x5143;&#x7EC4;&#x3001;&#x5217;&#x8868;&#x548C;&#x5B57;&#x5178;&#x90FD;&#x662F;&#x6709;&#x5E8F;&#x7684;&#xFF0C;&#x53EA;&#x6709;&#x96C6;&#x5408;&#x662F;&#x65E0;&#x5E8F;&#x7684;&#x3002;</p>
+<h5 id="10-&#x5B57;&#x8282;&#x7C7B;&#x578B;">10. &#x5B57;&#x8282;&#x7C7B;&#x578B;</h5>
+<p>&#x5BF9;&#x4E8E;&#x5B57;&#x7B26;&#x4E32;v = &apos;&#x5948;&#x4F55;&apos;&#xFF0C;&#x5185;&#x90E8;&#x4F7F;&#x7528;unicode&#x7F16;&#x7801;&#xFF0C;&#x201C;&#x5948;&#x201D;&#x4E0E;&#x201C;&#x4F55;&#x201D;&#x5206;&#x522B;&#x5360;4&#x4E2A;&#x5B57;&#x8282;&#x3002;&#x5982;&#x679C;&#x5BF9;&#x5B83;&#x7684;&#x5B57;&#x8282;&#x8FDB;&#x884C;&#x7F16;&#x7801;&#xFF0C;&#x8FBE;&#x5230;&#x538B;&#x7F29;&#x7684;&#x6548;&#x679C;&#xFF1A;v2 = v.encode(&apos;utf-8&apos;)&#xFF0C;&#x5F97;&#x5230;&#x7684;v2&#x662F;&#x5B57;&#x8282;&#x3002;&#x5C06;&#x5B57;&#x7B26;&#x4E32;&#x901A;&#x8FC7;&#x67D0;&#x79CD;&#x7F16;&#x7801;&#x65B9;&#x5F0F;&#x8FDB;&#x884C;&#x7F16;&#x7801;&#xFF0C;&#x7F16;&#x7801;&#x540E;&#x7684;&#x53EB;&#x505A;&#x5B57;&#x8282;&#x3002;&#x5B57;&#x8282;&#x7C7B;&#x578B;&#x663E;&#x793A;&#x4E00;&#x822C;&#x6709;&#x4E2A;&#x7279;&#x70B9;&#xFF1A;&#x524D;&#x9762;&#x6709;&#x4E2A;&#x201C;b&#x201D;&#x3002;&#x5199;&#x5165;&#x6587;&#x4EF6;&#x3001;&#x7F51;&#x7EDC;&#x4F20;&#x8F93;&#x65F6;&#xFF0C;&#x5B57;&#x7B26;&#x4E32;&#xFF08;unicode&#x7F16;&#x7801;&#xFF09;&#x9700;&#x8981;&#x8FDB;&#x884C;&#x538B;&#x7F29;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x7F16;&#x7801;&#x6210;utf-8&#x7684;&#x7C7B;&#x578B;&#xFF0C;&#x624D;&#x80FD;&#x8BA9;&#x7528;&#x6237;&#x8FDB;&#x884C;&#x6587;&#x4EF6;&#x64CD;&#x4F5C;&#x548C;&#x7F51;&#x7EDC;&#x4F20;&#x8F93;&#x3002;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+f = open(<span class="hljs-string">&apos;log.txt&apos;</span>, mode=<span class="hljs-string">&apos;wb&apos;</span>)
+v = <span class="hljs-string">&apos;&#x5948;&#x4F55;&apos;</span>
+data = v.encode(<span class="hljs-string">&apos;utf-8&apos;</span>)
+print(type(data), data)  <span class="hljs-comment"># &lt;class &apos;bytes&apos;&gt; b&apos;\xe5\xa5\x88\xe4\xbd\x95&apos;</span>
+f.write(data)
+f.close()
+</code></pre>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+f = open(<span class="hljs-string">&apos;log.txt&apos;</span>, mode=<span class="hljs-string">&apos;w&apos;</span>, encoding=<span class="hljs-string">&apos;utf-8&apos;</span>)  <span class="hljs-comment"># &#x5185;&#x90E8;&#x5C06;unicode&#x7F16;&#x7801;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x8F6C;&#x6362;&#x4E3A;utf-8&#x7684;&#x7F16;&#x7801;&#x65B9;&#x4FBF;&#x6587;&#x4EF6;&#x64CD;&#x4F5C;</span>
+data = <span class="hljs-string">&apos;&#x5948;&#x4F55;&apos;</span>
+f.write(data)  <span class="hljs-comment"># data&#x662F;&#x5B57;&#x7B26;&#x4E32;&#x7C7B;&#x578B;&#x5C31;&#x53EF;&#x4EE5;</span>
+f.close()
+</code></pre>
+<p>pickle&#x4E0E;json&#x7684;dumps&#x65B9;&#x6CD5;&#x4F1A;&#x5F97;&#x5230;&#x4E0D;&#x540C;&#x7684;&#x7C7B;&#x578B;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+<span class="hljs-keyword">import</span> json, pickle
+
+v = [<span class="hljs-string">&apos;thanlon&apos;</span>, <span class="hljs-string">&apos;&#x5948;&#x4F55;&apos;</span>]
+val = pickle.dumps(v)
+print(type(val), val)
+<span class="hljs-string">&apos;&apos;&apos;
+&lt;class &apos;bytes&apos;&gt; b&apos;\x80\x03]q\x00(X\x07\x00\x00\x00thanlonq\x01X\x06\x00\x00\x00\xe5\xa5\x88\xe4\xbd\x95q\x02e.&apos;
+&apos;&apos;&apos;</span>
+val2 = json.dumps(v)
+print(type(val2), val2)
+<span class="hljs-string">&apos;&apos;&apos;
+&lt;class &apos;str&apos;&gt; [&quot;thanlon&quot;, &quot;\u5948\u4f55&quot;]
+&apos;&apos;&apos;</span>
+</code></pre>
+<p>&#x5982;&#x679C;&#x662F;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5C31;&#x8BF4;&#x660E;&#x662F;unicode&#x7F16;&#x7801;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x3002;&#x5982;&#x679C;&#x662F;&#x5B57;&#x8282;&#xFF0C;&#x53EF;&#x80FD;&#x662F;utf-8&#xFF0C;&#x53EF;&#x80FD;&#x662F;gbk&#xFF0C;&#x4E5F;&#x53EF;&#x80FD;&#x662F;&#x5176;&#x5B83;&#x7F16;&#x7801;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x3002;</p>
+<h5 id="11-&#x6570;&#x636E;&#x7C7B;&#x578B;&#x5185;&#x5B58;&#x76F8;&#x5173;">11. &#x6570;&#x636E;&#x7C7B;&#x578B;&#x5185;&#x5B58;&#x76F8;&#x5173;</h5>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x662F;&#x5185;&#x90E8;&#x4FEE;&#x6539;&#x4E86;&#xFF0C;&#x8FD8;&#x662F;&#x91CD;&#x65B0;&#x8D4B;&#x503C;</p>
+<p>&#x2460; &#x793A;&#x4F8B;&#x4E00;&#xFF08;&#x5185;&#x90E8;&#x4FEE;&#x6539;&#xFF09;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+<span class="hljs-string">&apos;&apos;&apos;
+&#x7EC3;&#x4E60;&#xFF1A;v1&#x548C;v2&#x6307;&#x5411;&#x540C;&#x4E00;&#x5B58;&#x50A8;&#x7A7A;&#x95F4;
+&apos;&apos;&apos;</span>
+v1 = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]
+v2 = v1
+v1.append(<span class="hljs-number">4</span>)
+print(v1)
+print(v2)
+<span class="hljs-string">&apos;&apos;&apos;
+[1, 2, 3, 4]
+[1, 2, 3, 4]
+&apos;&apos;&apos;</span>
+</code></pre>
+<p>&#x2461; &#x793A;&#x4F8B;&#x4E8C;&#xFF08;&#x91CD;&#x65B0;&#x8D4B;&#x503C;&#xFF09;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+<span class="hljs-string">&apos;&apos;&apos;
+&#x7EC3;&#x4E60;&#xFF1A;v1&#x548C;v2&#x6307;&#x5411;&#x540C;&#x4E00;&#x5B58;&#x50A8;&#x7A7A;&#x95F4;
+&apos;&apos;&apos;</span>
+v1 = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]
+v2 = v1
+<span class="hljs-comment"># v1.append(4)</span>
+v1 = [<span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>]
+print(v1)
+print(v2)
+<span class="hljs-string">&apos;&apos;&apos;
+[4, 5, 6]
+[1, 2, 3]
+&apos;&apos;&apos;</span>
+</code></pre>
+<p>&#x2462; &#x793A;&#x4F8B;&#x4E09;&#xFF08;&#x91CD;&#x65B0;&#x8D4B;&#x503C;&#xFF09;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+<span class="hljs-string">&apos;&apos;&apos;
+&#x5B57;&#x7B26;&#x4E32;&#x5185;&#x90E8;&#x662F;&#x4E0D;&#x53EF;&#x4EE5;&#x4FEE;&#x6539;&#x7684;
+&apos;&apos;&apos;</span>
+v1 = <span class="hljs-string">&apos;thanlon&apos;</span>
+v2 = v1
+v1 = <span class="hljs-string">&apos;kiku&apos;</span>
+print(v2)
+<span class="hljs-string">&apos;&apos;&apos;
+thanlon
+&apos;&apos;&apos;</span>
+</code></pre>
+<p>&#x2463; &#x793A;&#x4F8B;&#x56DB;</p>
+<ul>
+<li>&#x7EC3;&#x4E60;1&#xFF08;&#x5185;&#x90E8;&#x4FEE;&#x6539;&#xFF09;<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+v = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]
+v2 = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, v]
+v.append(<span class="hljs-string">&apos;4&apos;</span>)
+print(v2)
+<span class="hljs-string">&apos;&apos;&apos;
+[1, 2, 3, [1, 2, 3, &apos;4&apos;]]
+&apos;&apos;&apos;</span>
+</code></pre>
+&#x2464; &#x7EC3;&#x4E60;2&#xFF08;&#x5185;&#x90E8;&#x4FEE;&#x6539;&#xFF09;<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+v = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]
+v2 = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, v]
+v2[<span class="hljs-number">3</span>].append(<span class="hljs-number">4</span>)
+print(v2)
+<span class="hljs-string">&apos;&apos;&apos;
+[1, 2, 3, [1, 2, 3, &apos;4&apos;]]
+&apos;&apos;&apos;</span>
+</code></pre>
+&#x2465; &#x7EC3;&#x4E60;3&#xFF08;&#x91CD;&#x65B0;&#x8D4B;&#x503C;&#xFF09;<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+<span class="hljs-string">&apos;&apos;&apos;
+&#x91CD;&#x65B0;&#x8D4B;&#x503C;
+&apos;&apos;&apos;</span>
+v = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]
+v2 = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, v]
+v = [<span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>]
+print(v2)
+<span class="hljs-string">&apos;&apos;&apos;
+[1, 2, 3, [1, 2, 3]]
+&apos;&apos;&apos;</span>
+</code></pre>
+&#x2466; &#x7EC3;&#x4E60;&#x4E94;<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+v = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]
+v2 = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, v]
+v2[<span class="hljs-number">3</span>] = <span class="hljs-number">4</span>
+print(v)
+<span class="hljs-string">&apos;&apos;&apos;
+[1, 2, 3]
+&apos;&apos;&apos;</span>
+</code></pre>
+&#x2467; &#x67E5;&#x770B;&#x5185;&#x5B58;&#x5730;&#x5740;</li>
+</ul>
+<p>&#x4FEE;&#x6539;&#x5185;&#x90E8;&#x5143;&#x7D20;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+v = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]
+v2 = v
+print(id(v), id(v2))  <span class="hljs-comment"># &#x6307;&#x5411;&#x540C;&#x4E00;&#x5730;&#x5740;</span>
+v.append(<span class="hljs-number">4</span>)
+print(id(v), id(v2))
+<span class="hljs-string">&apos;&apos;&apos;
+2375633494664 2375633494664
+2375633494664 2375633494664
+&apos;&apos;&apos;</span>
+</code></pre>
+<p>&#x91CD;&#x65B0;&#x8D4B;&#x503C;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+v = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]
+v2 = v
+print(id(v), id(v2))  <span class="hljs-comment"># &#x6307;&#x5411;&#x540C;&#x4E00;&#x5730;&#x5740;</span>
+v = [<span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>]
+print(id(v), id(v2))
+<span class="hljs-string">&apos;&apos;&apos;
+2398328087176 2398328087176
+2398328087240 2398328087176
+&apos;&apos;&apos;</span>
+</code></pre>
+<p>&#x2468; &#x5185;&#x5B58;&#x5730;&#x5740;&#x7279;&#x6B8A;&#x60C5;&#x51B5;</p>
+<pre><code class="lang-python"><span class="hljs-string">&apos;&apos;&apos;
+v1 = [1, 2, 3]
+v2 = [1, 2, 3]
+
+v3 = [1, 2, 3]
+v4 = [4, 5, 6]
+
+v5 = [1, 2, 3]
+v6 = v4
+&apos;&apos;&apos;</span>
+</code></pre>
+<p>&#x6309;&#x7406;&#x8BF4;&#x4E0A;&#x9762;&#x7684;v1&#x4E0E;v2&#xFF0C;v3&#x4E0E;v4&#xFF0C;v5&#x4E0E;v6&#x7684;&#x5185;&#x5B58;&#x5730;&#x5740;&#x662F;&#x4E0D;&#x540C;&#x7684;&#xFF0C;&#x4F46;&#x7279;&#x6B8A;&#x60C5;&#x51B5;&#x4E0B;&#x6709;&#xFF1A;</p>
+<ul>
+<li>&#x6574;&#x578B;&#xFF1A;-5~256</li>
+<li>&#x5B57;&#x7B26;&#x4E32;&#xFF1A;&#x7B80;&#x5355;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5982;&apos;thanlon&apos;&#xFF0C;&#x505A;&#x7F13;&#x5B58;&#xFF0C;&#x4E0D;&#x5F00;&#x8F9F;&#x5185;&#x5B58;&#x3002;&#x590D;&#x6742;&#x70B9;&#x7684;&#x5982;&apos;a_<em>~&apos;</em>&#x5927;&#x4E8E;1&#x7684;&#x6570;&#xFF0C;&#x4E00;&#x822C;&#x90FD;&#x4F1A;&#x5F00;&#x8F9F;&#x5185;&#x5B58;&#x3002;</li>
+</ul>
+<p>&#x8FD9;&#x5176;&#x5B9E;&#x662F;python&#x4E3A;&#x4E86;&#x63D0;&#x9AD8;&#x6027;&#x80FD;&#xFF0C;&#x505A;&#x7684;&#x4E00;&#x4E9B;&#x4F18;&#x5316;&#x7684;&#x65B9;&#x6848;&#x3002;</p>
+<p>&#x2469; == &#x548C;is&#x7684;&#x533A;&#x522B;&#xFF08;&#x9762;&#x8BD5;&#x9898;&#xFF09;</p>
+<p> ==&#xFF1A;&#x7528;&#x4E8E;&#x6BD4;&#x8F83;&#x503C;&#x662F;&#x5426;&#x76F8;&#x7B49;
+ is&#xFF1A;&#x7528;&#x4E8E;&#x6BD4;&#x8F83;&#x5185;&#x5B58;&#x5730;&#x5740;&#x662F;&#x5426;&#x76F8;&#x7B49;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+v1 = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]
+v2 = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>]
+print(v1 == v2)
+print(v1 <span class="hljs-keyword">is</span> v2)
+<span class="hljs-string">&apos;&apos;&apos;
+False
+False
+&apos;&apos;&apos;</span>
+</code></pre>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+v1 = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]
+v2 = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]
+print(v1 == v2)
+print(v1 <span class="hljs-keyword">is</span> v2)
+<span class="hljs-string">&apos;&apos;&apos;
+True
+False
+&apos;&apos;&apos;</span>
+</code></pre>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+v1 = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]
+v2 = v1
+print(v1 == v2)
+print(v1 <span class="hljs-keyword">is</span> v2)
+<span class="hljs-string">&apos;&apos;&apos;
+True
+True
+&apos;&apos;&apos;</span>
+</code></pre>
+<h5 id="12-&#x6570;&#x636E;&#x7C7B;&#x578B;&#x8F6C;&#x6362;">12. &#x6570;&#x636E;&#x7C7B;&#x578B;&#x8F6C;&#x6362;</h5>
+<h6 id="121-&#x5176;&#x5B83;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x4E3A;&#x6570;&#x5B57;&#x7C7B;&#x578B;">12.1 &#x5176;&#x5B83;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x4E3A;&#x6570;&#x5B57;&#x7C7B;&#x578B;</h6>
+<pre><code class="lang-py"><span class="hljs-comment"># &#x5B57;&#x7B26;&#x4E32;&#x8F6C;&#x6570;&#x5B57;&#x7C7B;&#x578B;</span>
+a = int(<span class="hljs-string">&apos;123&apos;</span>)
+print(type(a),a)
+b = float(<span class="hljs-string">&apos;123.456&apos;</span>)
+print(type(b),b)
+<span class="hljs-comment"># &#x5E03;&#x5C14;&#x7C7B;&#x578B;&#x8F6C;&#x6570;&#x5B57;&#x7C7B;&#x578B;</span>
+c = int(<span class="hljs-keyword">True</span>)
+d = float(<span class="hljs-keyword">True</span>)
+print(type(c),c)
+print(type(d),d)
+</code></pre>
+<p><code>&#x6267;&#x884C;&#x8BB0;&#x5F55;&#xFF1A;</code></p>
+<pre><code class="lang-js">&lt;<span class="hljs-class"><span class="hljs-keyword">class</span> &apos;<span class="hljs-title">int</span>&apos;&gt; 123
+&lt;<span class="hljs-title">class</span> &apos;<span class="hljs-title">float</span>&apos;&gt; 123.456
+&lt;<span class="hljs-title">class</span> &apos;<span class="hljs-title">int</span>&apos;&gt; 1
+&lt;<span class="hljs-title">class</span> &apos;<span class="hljs-title">float</span>&apos;&gt; 1.0
+</span></code></pre>
+<h6 id="122-&#x5176;&#x5B83;&#x7C7B;&#x578B;&#x8F6C;&#x5B57;&#x7B26;&#x4E32;">12.2 &#x5176;&#x5B83;&#x7C7B;&#x578B;&#x8F6C;&#x5B57;&#x7B26;&#x4E32;</h6>
+<pre><code class="lang-py"><span class="hljs-comment"># &#x6570;&#x5B57;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#x7C7B;&#x578B;</span>
+str1 = str(<span class="hljs-number">123</span>)
+str2 = str(<span class="hljs-number">123.456</span>)
+print(str1)
+print(str2)
+<span class="hljs-comment"># &#x5E03;&#x5C14;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#x7C7B;&#x578B;</span>
+str3 = str(<span class="hljs-keyword">True</span>)
+str4 = str(<span class="hljs-keyword">False</span>)
+print(str3)
+print(str4)
+<span class="hljs-comment"># &#x5217;&#x8868;&#x8F6C;&#x5B57;&#x7B26;&#x4E32;</span>
+str5 = str([<span class="hljs-string">&quot;Thanlon&quot;</span>,<span class="hljs-string">&quot;Kiku&quot;</span>])
+print(type(str5),str5)
+str6 = <span class="hljs-string">&apos;&apos;</span>.join([<span class="hljs-string">&apos;Thanlon&apos;</span>,<span class="hljs-string">&apos;kiku&apos;</span>]) <span class="hljs-comment"># &#x5C06;&#x5217;&#x8868;&#x4E2D;&#x5143;&#x7D20;&#x901A;&#x8FC7;join&#x8FDE;&#x63A5;&#x5FC5;&#x987B;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#x624D;&#x53EF;&#x4EE5;</span>
+print(type(str6),str6)
+<span class="hljs-comment"># &#x5143;&#x7EC4;&#x8F6C;&#x5B57;&#x7B26;&#x4E32;</span>
+str7 = str((<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>))
+print(type(str7),str7)
+</code></pre>
+<p><code>&#x6267;&#x884C;&#x8BB0;&#x5F55;&#xFF1A;</code></p>
+<pre><code class="lang-js">123
+123.456
+True
+False
+&lt;class &apos;str&apos;&gt; [&apos;Thanlon&apos;, &apos;Kiku&apos;]
+&lt;class &apos;str&apos;&gt; Thanlonkiku
+&lt;class &apos;str&apos;&gt; (1, 2, 3, 4, 5, 6)
+</code></pre>
+<h6 id="123-&#x5176;&#x5B83;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x4E3A;&#x5217;&#x8868;">12.3 &#x5176;&#x5B83;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x4E3A;&#x5217;&#x8868;</h6>
+<pre><code class="lang-py"><span class="hljs-comment"># &#x5B57;&#x7B26;&#x4E32;&#x8F6C;&#x6362;&#x4E3A;&#x5217;&#x8868;</span>
+str = <span class="hljs-string">&apos;thanlon&apos;</span>
+print(list(str)) <span class="hljs-comment"># [&apos;t&apos;, &apos;h&apos;, &apos;a&apos;, &apos;n&apos;, &apos;l&apos;, &apos;o&apos;, &apos;n&apos;]</span>
+<span class="hljs-comment"># &#x5143;&#x7EC4;&#x8F6C;&#x6362;&#x4E3A;&#x5217;&#x8868;</span>
+tuple1 = (<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>)
+print(list(tuple1)) <span class="hljs-comment"># [1, 2, 3, 4, 5, 6]</span>
+</code></pre>
+<p><code>&#x6267;&#x884C;&#x8BB0;&#x5F55;&#xFF1A;</code></p>
+<pre><code class="lang-js">[<span class="hljs-string">&apos;t&apos;</span>, <span class="hljs-string">&apos;h&apos;</span>, <span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;n&apos;</span>, <span class="hljs-string">&apos;l&apos;</span>, <span class="hljs-string">&apos;o&apos;</span>, <span class="hljs-string">&apos;n&apos;</span>]
+[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>]
+</code></pre>
+<h6 id="124-&#x5176;&#x5B83;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x4E3A;&#x5143;&#x7EC4;">12.4 &#x5176;&#x5B83;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x4E3A;&#x5143;&#x7EC4;</h6>
+<pre><code class="lang-py"><span class="hljs-comment"># &#x5B57;&#x7B26;&#x4E32;&#x8F6C;&#x5143;&#x7EC4;</span>
+str = <span class="hljs-string">&apos;thanlon&apos;</span> <span class="hljs-comment"># (&apos;t&apos;, &apos;h&apos;, &apos;a&apos;, &apos;n&apos;, &apos;l&apos;, &apos;o&apos;, &apos;n&apos;)</span>
+print(tuple(str))
+<span class="hljs-comment"># &#x5217;&#x8868;&#x8F6C;&#x5143;&#x7EC4;</span>
+lst = [<span class="hljs-number">123</span>,<span class="hljs-string">&apos;thanlon&apos;</span>]
+print(tuple(lst)) <span class="hljs-comment"># (123, &apos;thanlon&apos;)</span>
+</code></pre>
+<p><code>&#x6267;&#x884C;&#x8BB0;&#x5F55;&#xFF1A;</code></p>
+<pre><code class="lang-js">(<span class="hljs-string">&apos;t&apos;</span>, <span class="hljs-string">&apos;h&apos;</span>, <span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;n&apos;</span>, <span class="hljs-string">&apos;l&apos;</span>, <span class="hljs-string">&apos;o&apos;</span>, <span class="hljs-string">&apos;n&apos;</span>)
+(<span class="hljs-number">123</span>, <span class="hljs-string">&apos;thanlon&apos;</span>)
+</code></pre>
+<h6 id="125-&#x5176;&#x5B83;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x4E3A;&#x5E03;&#x5C14;">12.5 &#x5176;&#x5B83;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x4E3A;&#x5E03;&#x5C14;</h6>
+<pre><code class="lang-py"><span class="hljs-comment"># &#x53EA;&#x6709;&#x6570;&#x5B57;0&#x3001;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x7A7A;&#x5217;&#x8868;&#xFF0C;&#x7A7A;&#x5143;&#x7EC4;&#x8F6C;&#x6362;&#x4E3A;&#x5E03;&#x5C14;&#x662F;False&#xFF0C;&#x5176;&#x5B83;&#x7C7B;&#x578B;&#x8F6C;&#x5E03;&#x5C14;&#x4E3A;True</span>
+print(bool(<span class="hljs-number">0</span>)) <span class="hljs-comment"># print(bool(0)),(0)&#x5C31;&#x662F;&#x6570;&#x5B57;0</span>
+print(bool(<span class="hljs-string">&apos;&apos;</span>))
+print(bool([]))
+print(bool(()))
+</code></pre>
+<p><code>&#x6267;&#x884C;&#x8BB0;&#x5F55;&#xFF1A;</code></p>
+<pre><code class="lang-js">False
+False
+False
+False
+</code></pre>
+<blockquote>
+<p><strong>&#x5E38;&#x89C1;&#x7684;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#xFF1A;<code>&#x5B57;&#x7B26;&#x4E32;&#x8F6C;&#x6570;&#x5B57;</code>&#xFF0C;<code>&#x6570;&#x5B57;&#x8F6C;&#x5B57;&#x7B26;&#x4E32;</code>&#xFF0C;<code>&#x5217;&#x8868;&#x8F6C;&#x5143;&#x7EC4;</code>&#xFF0C;<code>&#x5143;&#x7EC4;&#x8F6C;&#x5217;&#x8868;</code>&#xFF0C;<code>&#x5176;&#x5B83;&#x8F6C;&#x5E03;&#x5C14;</code></strong></p>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../01-python-foundation/" class="navigation navigation-prev " aria-label="Previous page: 1. Python基础入门">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../03-python-function-detail/" class="navigation navigation-next " aria-label="Next page: 3. Python函数详解">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"2. Python数据类型","level":"1.3","depth":1,"next":{"title":"3. Python函数详解","level":"1.4","depth":1,"path":"03-python-function-detail/README.md","ref":"03-python-function-detail/README.md","articles":[]},"previous":{"title":"1. Python基础入门","level":"1.2","depth":1,"path":"01-python-foundation/README.md","ref":"01-python-foundation/README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"02-python-data-type/README.md","mtime":"2020-01-02T06:18:10.077Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-02T06:44:54.990Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
