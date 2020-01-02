@@ -1,0 +1,44 @@
+{
+    "title":"Python3教程",
+    "author":"Thanlon",
+    "language":"zh-hans",
+    "plugins": ["github","expandable-chapters","tbfed-pagefooter","search-pro","splitter","chapter-fold","back-to-top-button","theme-fexa","hide-element"],
+    "anchor-navigation-ex":{
+	 "anchor-navigation-ex": {
+            "showLevel": true,
+            "showGoTop": false
+        }
+    },
+    "variables": {
+        "themeFexa":{
+            "nav":[
+                {
+                    "url":"https://bysj39.com",
+                    "target":"",
+                    "name":"返回"
+                }
+            ]
+        }
+    },
+    "pluginsConfig": {
+        "github": {
+            "url": "https://github.com/ThanlonSmith/python3-munual"
+        },
+	"expandable-chapters":{
+	
+	},
+	"tbfed-pagefooter": {
+            "copyright":"Copyright © 2019-2022 39毕设网 版权所有",
+            "modify_label": "最新修改时间：",
+            "modify_format": "YYYY-MM-DD HH:mm:ss"
+        },
+	"theme-fexa":{
+            "search-placeholder":"输入关键字搜索", 
+            "logo":"./logo.png", 
+            "favicon": "./favicon.ico"
+        },
+	"hide-element": {
+            "elements": [".gitbook-link"]
+        }
+    }
+}

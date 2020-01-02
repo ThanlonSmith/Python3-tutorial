@@ -1,4 +1,3 @@
->@[toc]
 ##### 1. 编译器与解释器
 ###### 1.1 编译与解释
 ① 编译
@@ -49,7 +48,7 @@ input是固定格式，是输入的意思，括号里边的内容是给用户看
 变量名只能包含：字母、数字和下划线，变量不能以数字开头，不能是python中的关键字。
 
 变量命名的一个建议：见名知意；用下划线连接（不建议使用驼峰式命名）
->**Python中的关键字：and、as、asset、break、class、continue、def、del、elif、else、except、exec、finally、for、from、global、if、import、in、is、lambda、not、or、pass、print、raise、return、try、while、with、yield**
+**Python中的关键字：and、as、asset、break、class、continue、def、del、elif、else、except、exec、finally、for、from、global、if、import、in、is、lambda、not、or、pass、print、raise、return、try、while、with、yield**
 ###### 5.2 常量
 常量就是将变量名大写，尽量保持不更改的一种量，常量一经定义就不允许去改变。
 ##### 6. 注释
