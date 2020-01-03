@@ -2,7 +2,7 @@
     "title":"Python3教程",
     "author":"Thanlon",
     "language":"zh-hans",
-    "plugins": ["github","expandable-chapters","tbfed-pagefooter","search-pro","splitter","chapter-fold","back-to-top-button","theme-fexa","hide-element"],
+    "plugins": ["github","expandable-chapters-small","tbfed-pagefooter","search-pro","splitter","chapter-fold","back-to-top-button","theme-fexa","hide-element"],
     "anchor-navigation-ex":{
 	 "anchor-navigation-ex": {
             "showLevel": true,
