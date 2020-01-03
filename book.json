@@ -15,20 +15,20 @@
                 {
                     "url":"https://bysj39.com",
                     "target":"",
-                    "name":"返回"
+                    "name":"IT教程"
                 }
-            ]
+             ]
         }
     },
     "pluginsConfig": {
         "github": {
-            "url": "https://github.com/ThanlonSmith/python3-munual"
+            "url": "https://github.com/ThanlonSmith/python3-tutorial"
         },
 	"expandable-chapters":{
 	
 	},
 	"tbfed-pagefooter": {
-            "copyright":"Copyright © 2019-2022 39毕设网 版权所有",
+            "copyright":"Copyright © 2019-2020 39毕设网 版权所有",
             "modify_label": "最新修改时间：",
             "modify_format": "YYYY-MM-DD HH:mm:ss"
         },
