@@ -16,30 +16,59 @@
     * [1.12 主文件](01-python-foundation/12/README.md)
     * [1.13 基础入门练习题](01-python-foundation/13/README.md)
 * [2. Python数据类型](02-python-data-type/README.md)
-    * [2.1 Python](02-python-data-type/01/README.md)
-    * [2.2 Python](02-python-data-type/02/README.md)
-    * [2.3 Python](02-python-data-type/03/README.md)
-    * [2.4 Python](02-python-data-type/04/README.md)
-    * [2.5 Python](02-python-data-type/05/README.md)
-* [3. Python函数详解](03-python-function-detail/README.md)
-    * 3.1 Python
-    * 3.2 Python
-    * 3.3 Python
-    * 3.4 Python
+    * [2.1 整型](02-python-data-type/01/README.md)
+    * [2.2 布尔](02-python-data-type/02/README.md)
+    * [2.3 字符串](02-python-data-type/03/README.md)
+    * [2.4 列表](02-python-data-type/04/README.md)
+    * [2.5 元组](02-python-data-type/05/README.md)
+    * [2.6 字典](02-python-data-type/06/README.md)
+    * [2.7 None](02-python-data-type/07/README.md)
+    * [2.8 集合](02-python-data-type/08/README.md)
+    * [2.9 有无序性](02-python-data-type/09/README.md)
+    * [2.10 字节类型](02-python-data-type/10/README.md)
+    * [2.11 内存相关](02-python-data-type/11/README.md)
+    * [2.12 类型转换](02-python-data-type/12/README.md)
+* [3. Python函数](03-python-function-detail/README.md)
+    * [3.1 三元运算](03-python-function-detail/01/README.md)
+    * [3.2 面向过程与函数式编程](03-python-function-detail/02/README.md)
+    * [3.3 函数](03-python-function-detail/03/README.md)
+    * [3.4 函数参数](03-python-function-detail/04/README.md)
+    * [3.5 函数返回值](03-python-function-detail/05/README.md)
+    * [3.6 函数作用域](03-python-function-detail/06/README.md)
+    * [3.7 函数初级](03-python-function-detail/07/README.md)
+    * [3.8 lambda表达式](03-python-function-detail/08/README.md)
+    * [3.9 内置函数](03-python-function-detail/09/README.md)
+    * [3.10 函数中级](03-python-function-detail/10/README.md)
+    * [3.11 函数高级](03-python-function-detail/11/README.md)
+    * [3.12 递归](03-python-function-detail/12/README.md)
+    * [3.13 常见内置函数](03-python-function-detail/13/README.md)
 * [4. Python装饰器](04-python-decorator/README.md)
-    * 1.1 Python
-    * 1.1 Python
-    * 1.1 Python
-    * 1.1 Python
-    * 1.1 Python
-* [5. Python推倒式](05-python-derivation/README.md)
-    * 1.1 Python
+    * [4.1 装饰器](04-python-decorator/01/README.md)
+* [5. Python推导式](05-python-derivation/README.md)
+    * [5.1 推导式](05-python-derivation/01/README.md)
 * [6. Python内置库](06-python-built-in-lib/README.md)
-    * 1.1 Python
+    * [6.1 内置库](06-python-built-in-lib/01/README.md)
 * [7. Python第三方库](07-python-third-party-lib/README.md)
-    * 1.1 Python
+    * [7.1 第三方库](07-python-third-party-lib/01/README.md)
 * [8. Python迭代器](08-python-iterator/README.md)
-    * 1.1 Python
+    * [8.1 迭代器的作用](08-python-iterator/01/README.md)
+    * [8.2 迭代器的使用](08-python-iterator/02/README.md)
+    * [8.3 For循环与迭代器](08-python-iterator/03/README.md)
+    * [8.4 可迭代对象](08-python-iterator/04/README.md)
+    * [8.5 可迭代对象与迭代器](08-python-iterator/05/README.md)
+    * [8.6 动手写一个迭代器](08-python-iterator/06/README.md)
 * [9. Python生成器](09-python-generator/README.md)
-    * 1.1 Python
+    * [9.1 生成器函数](09-python-generator/01/README.md)
+    * [9.2 yield from](09-python-generator/02/README.md)
+    * [9.3 生成器案例](09-python-generator/03/README.md)
+    * [9.4 生成器总结](09-python-generator/04/README.md)
+* [10. Python文件操作](10-python-file/README.md)
+    * [10.1 文件操作基础](10-python-file/01/README.md)
+    * [10.2 文件打开模式](10-python-file/02/README.md)
+    * [10.3 文件操作](10-python-file/03/README.md)
+    * [10.4 with as用法](10-python-file/04/README.md)
+    * [10.5 文件操作例题](10-python-file/05/README.md)
+* [11. Python深浅拷贝](11-python-copy/README.md)
+    * [11.1 不可变类型的拷贝](11-python-copy/01/README.md)
+    * [11.1 可变类型的拷贝](11-python-copy/02/README.md)
 
