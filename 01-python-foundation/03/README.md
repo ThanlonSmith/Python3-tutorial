@@ -1,4 +1,3 @@
-### 1.3 IDLE编辑器
 ctrl+N：启动IDLE
 
 ctrl+Q：退出IDLE
