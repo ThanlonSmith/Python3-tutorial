@@ -1,5 +1,5 @@
 {
-    "title":"Python3教程",
+    "title":"Python教程",
     "author":"Thanlon",
     "language":"zh-hans",
     "plugins": ["github","expandable-chapters-small","tbfed-pagefooter","search-pro","splitter","chapter-fold","back-to-top-button","theme-fexa","hide-element"],
@@ -28,7 +28,7 @@
 	
 	},
 	"tbfed-pagefooter": {
-            "copyright":"Copyright © 2019-2020 39毕设网 版权所有",
+            "copyright":"Copyright © 2019-2020 <a href='https://bysj39.com'>39毕设网</a> 版权所有",
             "modify_label": "最新修改时间：",
             "modify_format": "YYYY-MM-DD HH:mm:ss"
         },
